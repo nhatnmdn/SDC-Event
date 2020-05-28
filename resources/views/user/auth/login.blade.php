@@ -1,7 +1,6 @@
 @extends('master.layout')
 @section('title','Login')
 @section('content')
-
     <form class="col-md-6 container" style="padding-top:200px ;margin-top: 80px; height: 660px" action="{{route('login')}}" method="post">
         {{csrf_field()}}
         @if(Session::has('messages'))
@@ -37,8 +36,7 @@
             </div>
         </div>
         <div class="container">
-        <button type="submit" style="width: 100px;margin-right: 190px; float: right" class="btn btn-success container">Login</button>
+            <button type="submit" style="width: 100px;margin-right: 190px; float: right" class="btn btn-success container">Login</button>
         </div>
     </form>
-
 @endsection
