@@ -58,7 +58,7 @@
                         <li><a style="text-decoration: none;" href="{{route('login.form')}}">Login</a></li>
                     @endguest()
                     @auth()
-                        <li><a style="text-decoration: none;" href="">Profile</a></li>
+                        <li><a style="text-decoration: none;" href="{{route('profile')}}">Profile</a></li>
                         <li><a style="text-decoration: none;" href="{{route('logout')}}">Logout</a></li>
                     @endauth
                 </ul>

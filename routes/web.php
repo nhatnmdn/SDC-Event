@@ -28,3 +28,11 @@ Route::group(['namespace' => 'Auth'], function () {
 Route::group(['namespace' => 'User'], function () {
     Route::get('/', 'UserController@index')->name('index');
 });
+
+Route::group(['namespace' => 'User', 'middleware' => 'auth'], function () {
+    Route::get('/profile', 'UserController@profile')->name('profile');
+    Route::get('change-password', 'UserController@changePasswordUser')->name('edit.password');
+    Route::put('/change-password', 'UserController@updatePasswordUser')->name('update.password');
+    Route::get('/profile/edit', 'UserController@edit')->name('profile.edit.form');
+    Route::put('/profile/update', 'UserController@update')->name('profile.update');
+});
