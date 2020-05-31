@@ -20,6 +20,5 @@ $factory->define(\App\Event::class, function (Faker $faker) {
         'chairman' => $faker->name,
         'place' => $faker->country,
         'max_register' => $faker->numberBetween(0,20),
-
     ];
 });

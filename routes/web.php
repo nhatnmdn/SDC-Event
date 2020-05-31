@@ -13,6 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['namespace' => 'Auth'], function () {
+    Route::get('/login', 'LoginController@showLoginForm')->name('login.form');
+    Route::post('login', 'LoginController@login')->name('login');
+    Route::get('/logout', 'LoginController@logout')->name('logout');
+    Route::get('/register', 'RegisterController@showRegisterForm')->name('register.form');
+    Route::post('register', 'RegisterController@store')->name('register');
+    Route::get('/forgot-password', 'ResetPasswordController@showForgotForm')->name('forgot.form');
+    Route::post('/forgot-password', 'ResetPasswordController@sendPasswordMail')->name('send.password.mail');
+    Route::get('/password-reset', 'ResetPasswordController@passwordResetForm')->name('password.reset.form');
+    Route::post('/password-reset', 'ResetPasswordController@passwordReset')->name('password.reset');
+});
+
+Route::group(['namespace' => 'User'], function () {
+    Route::get('/', 'UserController@index')->name('index');
+});
+
+Route::group(['namespace' => 'User', 'middleware' => 'auth'], function () {
+    Route::get('/profile', 'UserController@profile')->name('profile');
+    Route::get('change-password', 'UserController@changePasswordUser')->name('edit.password');
+    Route::put('/change-password', 'UserController@updatePasswordUser')->name('update.password');
+    Route::get('/profile/edit', 'UserController@edit')->name('profile.edit.form');
+    Route::put('/profile/update', 'UserController@update')->name('profile.update');
 });
