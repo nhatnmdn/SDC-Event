@@ -7,9 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    protected $fillable = [
-
-    ];
+    protected $fillable = ['*'];
 
     public function registrationEvents(){
         return $this->hasOne(RegistrationEvent::class);

@@ -15,9 +15,9 @@ class CreateRegistrationTable extends Migration
     {
         Schema::create('registration', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('r_status')->default(0);
-            $table->boolean('r_checkin')->nullable();
-            $table->string('r_code')->nullable();
+            $table->integer('status')->default(0);
+            $table->boolean('checkin')->nullable();
+            $table->string('code')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('event_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
