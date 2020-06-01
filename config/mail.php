@@ -107,4 +107,5 @@ return [
         ],
     ],
 
+    'mail_sender' => env('MAIL_SYSTEM', 'admin@gmail.com'),
 ];
