@@ -45,7 +45,6 @@ class AuthController extends Controller
             'remember_me' => 'boolean'
         ]);
         $credentials = request(['email', 'password']);
-        $credentials['deleted_at'] = null;
 
         if(!Auth::attempt($credentials))
             return response()->json([

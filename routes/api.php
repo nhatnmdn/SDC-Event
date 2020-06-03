@@ -17,7 +17,7 @@ Route::group([
 });
 
 
-Route::group(['middleware' => 'auth:api'], function(){
+Route::group(['middleware' => 'api:api'], function(){
     Route::get('user','Api\AuthController@user'); // hiển thị thông tin người dùng
     Route::get('/logout', 'Api\AuthController@logout'); //đăng xuất
 

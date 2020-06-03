@@ -112,7 +112,7 @@ class EventController extends Controller
             'user_id' => $user->id,
             'registration.status'  => 0,
         ])
-        ->select('registration.id','registration.user_id','registration.status','registration.checkin','events.name','events.chairman','events.start_time','events.end_time')
+        ->select('registration.id','registration.user_id','registration.event_id','registration.status','registration.checkin','events.name','events.chairman','events.start_time','events.end_time')
         ->get();
 
         return response()->json($list);
