@@ -36,3 +36,33 @@ Route::group(['namespace' => 'User', 'middleware' => 'auth'], function () {
     Route::get('/profile/edit', 'UserController@edit')->name('profile.edit.form');
     Route::put('/profile/update', 'UserController@update')->name('profile.update');
 });
+
+
+
+/*--------------ADMIN-------------------*/
+
+        Route::get('admin/login','Admin\AdminLoginController@getLogin')->name('admin.auth');
+        Route::post('admin/login','Admin\AdminLoginController@postLogin');
+
+        Route::group(['prefix'=>'admin','middleware'=>'AdminLogin'],function (){
+            Route::get('logout','Admin\AdminLoginController@LogoutAdmin')->name('logout');
+        Route::get('/','Admin\AdminController@index')->name('admin.home');
+
+        Route::get('/event','Admin\CreateEventController@index')->name('admin.get.list.event');
+        Route::get('/event/create','Admin\CreateEventController@create')->name('admin.get.create.event');
+        Route::post('/event/create','Admin\CreateEventController@store');
+        Route::get('/event/edit/{id}','Admin\CreateEventController@edit')->name('admin.get.edit.event');
+        Route::post('/event/edit/{id}','Admin\CreateEventController@update');
+        Route::get('/event/{action}/{id}','Admin\CreateEventController@action')->name('admin.get.action.event');
+
+
+        Route::get('/registration','Admin\ListRegisterEventController@index')->name('admin.get.list.registration');
+
+
+        Route::get('/user','Admin\ManagerUserController@index')->name('admin.get.list.user');
+
+        Route::get('/personel','Admin\ManagerPersonelController@index')->name('admin.get.list.personel');
+        Route::get('/personel/create','Admin\ManagerPersonelController@create')->name('admin.get.create.personel');
+        Route::get('/personel/edit','Admin\ManagerPersonelController@edit')->name('admin.get.edit.personel');
+
+        });
