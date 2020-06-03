@@ -23,8 +23,10 @@ Route::group(['middleware' => 'auth:api'], function(){
 
     Route::put('/update_info','Api\ChangeAccountController@update_infomation'); // cập nhật thông tin người dùng
     Route::put('/update_pass','Api\ChangeAccountController@update_password'); // cập nhật mật khẩu người dùng
+    Route::post('/UploadAvatar','Api\UploadImageController@update_avatar'); // cập nhật avatar
 
     Route::post('/register_event/{id}','Api\EventController@regis_event'); // đăng kí sự kiện
+    Route::put('/cancel_event/{id}','Api\EventController@cancel_event'); // hủy sự kiện
     Route::get('/history_regis','Api\EventController@history_register_event'); // lịch sử đăng ký sự kiện
 
     Route::post('/checkin/{id}','Api\CheckinController@checkin'); // checkin

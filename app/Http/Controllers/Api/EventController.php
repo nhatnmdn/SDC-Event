@@ -39,7 +39,10 @@ class EventController extends Controller
     public function regis_event(Request $request,$id)
     {
         $event = Event::find($id);
-        $list_regis = RegistrationEvent::where('event_id',$id)->count();
+        $list_regis = RegistrationEvent::where([
+            'event_id'  => $id,
+            'status'    => 0
+        ])->count();
         $user = $request->user();
         $register = new RegistrationEvent();
         if($user)
@@ -47,6 +50,7 @@ class EventController extends Controller
             $list = RegistrationEvent::where([
                 'user_id'   => $user->id,
                 'event_id'  => $event->id,
+                'status'    => 0
             ])->first();
             $register->user_id = $user->id;
             $register->event_id = $event->id;
@@ -54,7 +58,7 @@ class EventController extends Controller
             if(isset($list))
             {
                 return response()->json([
-                    'message' => 'Bạn đã đăng ký sự kiền rồi nhé!',
+                    'message' => 'Mỗi người chỉ được phép đăng ký 1 lần thôi nhé!',
                 ]);
             }else
             {
@@ -73,6 +77,27 @@ class EventController extends Controller
         }
         return response()->json([
             'message' => 'Bạn cần đăng nhập để có thể đăng ký tham gia sự kiện. Xin cảm ơn!',
+        ]);
+    }
+
+    public function cancel_event(Request $request, $id)
+    {
+        $user = $request->user();
+        $regis = RegistrationEvent::where([
+            'user_id'   => $user->id,
+            'event_id'  => $id,
+            'status'    => 0
+        ])->first();
+        if($regis)
+        {
+            $regis->status = 1;
+            $regis->save();
+            return response()->json([
+                'message' => 'Bạn đã hủy sự kiện thành công',
+            ]);
+        }
+        return response()->json([
+            'message' => 'Bạn chưa đăng ký sự kiện này',
         ]);
     }
 
