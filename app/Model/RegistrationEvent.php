@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class RegistrationEvent extends Model
 {
     protected $table = 'registration';
-    protected $fillable = ['*'];
+    protected $fillable = ['checkin','code','user_id','event_id','status'];
 
     public function users(){
         return $this->belongsToMany(User::class);
