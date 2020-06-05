@@ -59,8 +59,16 @@
                         <li><a style="text-decoration: none;" href="{{route('login.form')}}">Login</a></li>
                     @endguest()
                     @auth()
-                        <li><a style="text-decoration: none;" href="{{route('profile')}}">Profile</a></li>
-                        <li><a style="text-decoration: none;" href="{{route('logout')}}">Logout</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+                            <ul class="dropdown-menu">
+                                @if(!\App\Helpers\GlobalHelper::checkUserRole())
+                                    <li><a href="{{route('admin.home')}}"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+                                @endif
+                                <li><a href="{{route('profile')}}"><i class="fas fa-user-circle"></i> <span>Profile</span></a></li>
+                                <li><a href="{{route('logout')}}"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
+                            </ul>
+                        </li>
                     @endauth
                 </ul>
             </nav>
@@ -114,8 +122,17 @@
     $(".navigation li a").click(function () {
         $(".checkbtn").click()
     })
+
+    $("div .alert").delay(5000).slideUp();
 </script>
 </body>
+
+<style>
+
+    .bg-light ul li:hover .dropdown-menu{
+        display: block;
+    }
+</style>
 
 </html>
 
