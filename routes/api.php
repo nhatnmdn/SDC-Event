@@ -29,7 +29,8 @@ Route::group(['middleware' => 'api:api'], function(){
     Route::put('/cancel_event/{id}','Api\EventController@cancel_event'); // hủy sự kiện
     Route::get('/history_regis','Api\EventController@history_register_event'); // lịch sử đăng ký sự kiện
 
-    Route::post('/checkin/{id}','Api\CheckinController@checkin'); // checkin
+    Route::get('/checkin/{id}','Api\CheckinController@checkin'); // checkin
+    // Route::post('/checkin','Api\CheckinController@checkin_admin'); // checkin
 });
 
 Route::prefix('event')->group(function (){

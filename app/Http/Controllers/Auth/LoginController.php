@@ -35,14 +35,14 @@ class LoginController extends Controller
         return back()->withErrors('Wrong Username or Password')->withInput();
     }
 
-    // public function logout()
-    // {
-    //     if (Auth::check()) {
-    //         Auth::logout();
+    public function logout()
+    {
+        if (Auth::check()) {
+            Auth::logout();
 
-    //         return redirect(route('index'));
-    //     }
+            return redirect(route('index'));
+        }
 
-    //     return abort(401);
-    // }
+        return abort(401);
+    }
 }
