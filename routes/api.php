@@ -30,7 +30,6 @@ Route::group(['middleware' => 'api:api'], function(){
     Route::get('/history_regis','Api\EventController@history_register_event'); // lịch sử đăng ký sự kiện
 
     Route::get('/checkin/{id}','Api\CheckinController@checkin'); // checkin
-    // Route::post('/checkin','Api\CheckinController@checkin_admin'); // checkin
 });
 
 Route::prefix('event')->group(function (){
