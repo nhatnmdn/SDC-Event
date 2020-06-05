@@ -38,38 +38,35 @@ Route::group(['namespace' => 'User', 'middleware' => 'auth'], function () {
 });
 
 
+Route::group(['namespace' => 'Event'], function () {
+    Route::get('/', 'RegisterEventController@index')->name('index');
+    Route::get('/detail/{id}', 'RegisterEventController@detailEvent')->name('event.detail');
+    Route::post('/register_event/{id}','RegisterEventController@registerEvent')->name('event.register');
+});
 
-/*--------------ADMIN-------------------*/
 
-//Route::prefix('admin')->group(function() {
-//    Route::get('/','Admin\AdminController@index')->name('admin.home');
-//
-//    Route::group(['prefix' => 'event'], function(){
-//        Route::get('/','Admin\CreateEventController@index')->name('admin.get.list.event');
-//        Route::get('/create','Admin\CreateEventController@create')->name('admin.get.create.event');
-//        Route::post('/create','Admin\CreateEventController@store');
-//        Route::get('/edit/{id}','Admin\CreateEventController@edit')->name('admin.get.edit.event');
-//        Route::post('/edit/{id}','Admin\CreateEventController@update');
-//        Route::get('/{action}/{id}','Admin\CreateEventController@action')->name('admin.get.action.event');
-//
-//    });
-//
-//
-//    Route::group(['prefix' => 'registration'], function(){
-//        Route::get('/','Admin\ListRegisterEventController@index')->name('admin.get.list.registration');
-//
-//    });
-//
-//    Route::group(['prefix' => 'user'], function(){
-//        Route::get('/','Admin\ManagerUserController@index')->name('admin.get.list.user');
-//
-//    });
-//
-//    Route::group(['prefix' => 'personnel'], function(){
-//        Route::get('/','Admin\ManagerPersonnelController@index')->name('admin.get.list.personnel');
-//        Route::get('/create','Admin\ManagerPersonnelController@create')->name('admin.get.create.personnel');
-//        Route::get('/edit','Admin\ManagerPersonnelController@edit')->name('admin.get.edit.personnel');
-//    });
-//
-//});
+
+Route::group(['prefix'=>'admin'],function (){
+    Route::get('/','Admin\AdminController@index')->name('admin.home');
+
+    Route::get('/event','Admin\CreateEventController@index')->name('admin.get.list.event');
+    Route::get('/event/create','Admin\CreateEventController@create')->name('admin.get.create.event');
+    Route::post('/event/create','Admin\CreateEventController@store');
+    Route::get('/event/edit/{id}','Admin\CreateEventController@edit')->name('admin.get.edit.event');
+    Route::post('/event/edit/{id}','Admin\CreateEventController@update');
+    Route::get('/event/{action}/{id}','Admin\CreateEventController@action')->name('admin.get.action.event');
+
+
+    Route::get('/registration','Admin\ListRegisterEventController@index')->name('admin.get.list.registration');
+
+
+    Route::get('/user','Admin\ManagerUserController@index')->name('admin.get.list.user');
+
+    Route::get('/personel','Admin\ManagerPersonelController@index')->name('admin.get.list.personel');
+    Route::get('/personel/create','Admin\ManagerPersonelController@create')->name('admin.get.create.personel');
+    Route::get('/personel/edit','Admin\ManagerPersonelController@edit')->name('admin.get.edit.personel');
+
+});
+
+
 
