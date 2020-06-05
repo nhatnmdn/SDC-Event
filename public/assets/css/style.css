@@ -1,0 +1,33 @@
+.form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border-top: 3px solid #22A1F9;
+}
+
+.detail-user {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.detail-user h4 {
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+#text {
+    box-shadow: 4px 6px 11px -1px;
+}
+
+.panel-heading h3 {
+    font-weight: bold;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.error-text {
+    color: red;
+    margin-top: 5px;
+}

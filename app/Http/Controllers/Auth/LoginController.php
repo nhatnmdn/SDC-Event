@@ -3,6 +3,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Helpers\GlobalHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use App\Model\User;
@@ -26,23 +27,27 @@ class LoginController extends Controller
     {
         $params = $request->except('_token');
 
-        $status = $this->user->login($params);
+        if (Auth::attempt($params)) {
+            if (GlobalHelper::checkUserRole()) {
 
-        if ($status) {
-            return redirect(route('index'));
+                return redirect(route('index'));
+            }
+
+            return redirect(route('admin.home'))->with('login','Đăng nhập thành công');
         }
 
         return back()->withErrors('Wrong Username or Password')->withInput();
+
     }
 
-    // public function logout()
-    // {
-    //     if (Auth::check()) {
-    //         Auth::logout();
+    public function logout()
+    {
+        if (Auth::check()) {
+            Auth::logout();
 
-    //         return redirect(route('index'));
-    //     }
+            return redirect(route('index'));
+        }
 
-    //     return abort(401);
-    // }
+        return abort(401);
+    }
 }
