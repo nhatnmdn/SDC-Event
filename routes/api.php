@@ -25,7 +25,7 @@ Route::group(['middleware' => 'api:api', 'namespace' => 'Api'], function(){
     Route::put('/update_pass','ChangeAccountController@update_password'); // cập nhật mật khẩu người dùng
     Route::post('/UploadAvatar','UploadImageController@update_avatar'); // cập nhật avatar
 
-    Route::get('/checkin/{id}','CheckinController@checkin'); // checkin
+    Route::put('/checkin/{id}','CheckinController@checkin'); // checkin
 
     Route::prefix('event')->group(function (){
         Route::get('/list_happen','EventController@list_happen'); // danh sách sự kiện đang diễn ra

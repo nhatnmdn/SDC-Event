@@ -48,7 +48,7 @@ class UserController extends Controller
         $status = $this->user->updatePasswordUser($params);
 
         if (!$status) {
-            return back()->withErrors(['Current Password' => 'Wrong Current Password. Please try again!']);
+            return back()->withErrors(['Current Password' => __('Wrong Current Password. Please try again')]);
         }
 
         return redirect(route('profile'))->with($this->message['change_password_success']);

@@ -11,7 +11,7 @@
                     </div>
                     <h3>{{$item->name}}</h3>
                     <p>{!! $item->intro !!}</p>
-                    <a href="{{route('event.detail',$item->id)}}"><p style="background-color: #EF5656;">Read more &rarr;</p></a>
+                    <a href="{{route('event.detail',$item->id)}}"><p style="background-color: #EF5656;">{{ __('Read more') }} &rarr;</p></a>
                 </div>
             </div>
         @endforeach

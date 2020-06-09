@@ -31,8 +31,7 @@
                         <p><strong>Kết thúc</strong>: {{$detail->end_time}}</p>
                         <p><strong>Địa điểm</strong>: {{$detail->place}}</p>
                         <div>
-                            <button type="submit" class="btn btn-primary" style="width: max-content;height: 35px">Đăng
-                                kí
+                            <button type="submit" class="btn btn-primary" style="width: max-content;height: 35px">{{ __('Register') }}
                             </button>
                         </div>
 

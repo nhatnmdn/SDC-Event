@@ -3,10 +3,10 @@
 @section('content')
     <form action="{{route('register')}}" method="post" class="col-md-6 container" role="form" style="padding-top:100px ;margin-top: 80px; height: 660px">
         @csrf
-        <h1 class="text-center col-lg-12 col-md-5">Register</h1>
+        <h1 class="text-center col-lg-12 col-md-5">{{__('Register')}}</h1>
         <div class="form-group row">
             <div class="col-xs-3 col-md-3">
-                <label for="" class="float-md-right mt-2">Name: </label>
+                <label for="" class="float-md-right mt-2">{{__('Full name')}}: </label>
             </div>
             <div class="col-xs-9 col-md-8">
                 <input type="text" class="form-control" name="name" value="{{old('name')}}">
@@ -32,7 +32,7 @@
         </div>
         <div class="row form-group">
             <div class="col-xs-3 col-md-3">
-                <label for="" class="float-md-right mt-2">Password: </label>
+                <label for="" class="float-md-right mt-2">{{__('Password')}}: </label>
             </div>
             <div class="col-xs-3 col-md-8">
                 <input type="password" class="form-control mb-1" name="password">
@@ -45,7 +45,7 @@
         </div>
         <div class="form-group row">
             <div class="col-xs-3 col-md-3">
-                <label for="" class="float-md-right mt-2">Confirm Password: </label>
+                <label for="" class="float-md-right mt-2" style="width: max-content">{{__('Confirm Password')}}: </label>
             </div>
             <div class="col-xs-6 col-md-8">
                 <input type="password" class="form-control" name="password_confirmation">
@@ -58,7 +58,7 @@
         </div>
         <div class="form-group row">
             <div class="col-xs-3 col-md-3">
-                <label for="" class="float-md-right mt-2">Address: </label>
+                <label for="" class="float-md-right mt-2">{{__('Address')}}: </label>
             </div>
             <div class="col-xs-9 col-md-8">
                 <input type="text" class="form-control" name="address" value="{{old('address')}}">
@@ -71,7 +71,7 @@
         </div>
         <div class="form-group row">
             <div class="col-xs-3 col-md-3">
-                <label for="" class="float-md-right mt-2">Phone: </label>
+                <label for="" class="float-md-right mt-2">{{__('Phone')}}: </label>
             </div>
             <div class="col-xs-9 col-md-8">
                 <input type="tel" class="form-control" name="phone" value="{{old('phone')}}">
@@ -82,6 +82,6 @@
                 @endif
             </div>
         </div>
-        <button type="submit" class="btn btn-lg btn-success btn-block col-md-5 container">Sign Up</button>
+        <button type="submit" class="btn btn-lg btn-success btn-block col-md-5 container">{{__('Sign Up')}}</button>
     </form>
 @endsection

@@ -34,7 +34,7 @@ class RegisterController extends Controller
             return redirect(route('login.form'))->with($this->message['register_success']);
         }
 
-        return back()->withErrors('Register Failed. Please check again');
+        return back()->withErrors(__('Register Failed. Please check again'));
 
     }
 }

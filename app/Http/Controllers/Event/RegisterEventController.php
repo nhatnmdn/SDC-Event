@@ -48,17 +48,17 @@ class RegisterEventController extends Controller
             $register->code = Str::random(60);
             if(isset($list))
             {
-                return redirect()->back()->with('warning','Mỗi người chỉ được đăng kí một lần !');
+                return redirect()->back()->with('warning', __('You are already subscribed to this event'));
             }else
             {
                 if($event->max_register > $list_register)
                 {
                     $register->save();
-                    return redirect()->back()->with('success','Đăng kí thành công !');
+                    return redirect()->back()->with('success',__('Register success'));
                 }
-                return redirect()->back()->with('danger','Số lượng người đăng kí đã dủ !');
+                return redirect()->back()->with('danger',__('The number of subscribers is full'));
             }
         }
-        return redirect()->route('login.form')->withErrors('Bạn cần đăng nhập để để tham gia đăng kí sự kiện');
+        return redirect()->route('login.form')->withErrors(__('You need to be logged in to register for the event'));
     }
 }

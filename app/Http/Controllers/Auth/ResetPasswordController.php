@@ -38,7 +38,7 @@ class ResetPasswordController extends Controller
             return redirect(route('login.form'))->with($this->message['send_mail_success']);
         }
 
-        return back()->withErrors('Send mail failed. Please send mail again!')->withInput();
+        return back()->withErrors(__('Send mail failed. Please send mail again'))->withInput();
     }
 
     public function passwordResetForm(Request $request)
