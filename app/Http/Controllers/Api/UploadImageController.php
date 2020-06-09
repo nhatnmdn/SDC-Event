@@ -15,7 +15,7 @@ class UploadImageController extends Controller
             $fileName = ('avatar.jpg');
             $path = $request->file('avatar')->move(public_path("/avatar".'/'.$user->id), $fileName);
 
-            $user->avatar = url('avatar/'.$user->id.'/'.$fileName);
+            $user->avatar = 'avatar/'.$user->id.'/'.$fileName;
             $user->save();
             return response()->json($user);
         }

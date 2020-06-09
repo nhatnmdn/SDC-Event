@@ -17,26 +17,28 @@ Route::group([
 });
 
 
-Route::group(['middleware' => 'api:api'], function(){
-    Route::get('user','Api\AuthController@user'); // hiển thị thông tin người dùng
-    Route::get('/logout', 'Api\AuthController@logout'); //đăng xuất
+Route::group(['middleware' => 'api:api', 'namespace' => 'Api'], function(){
+    Route::get('user','AuthController@user'); // hiển thị thông tin người dùng
+    Route::get('/logout', 'AuthController@logout'); //đăng xuất
 
-    Route::put('/update_info','Api\ChangeAccountController@update_infomation'); // cập nhật thông tin người dùng
-    Route::put('/update_pass','Api\ChangeAccountController@update_password'); // cập nhật mật khẩu người dùng
-    Route::post('/UploadAvatar','Api\UploadImageController@update_avatar'); // cập nhật avatar
+    Route::put('/update_info','ChangeAccountController@update_infomation'); // cập nhật thông tin người dùng
+    Route::put('/update_pass','ChangeAccountController@update_password'); // cập nhật mật khẩu người dùng
+    Route::post('/UploadAvatar','UploadImageController@update_avatar'); // cập nhật avatar
 
-    Route::post('/register_event/{id}','Api\EventController@regis_event'); // đăng kí sự kiện
-    Route::put('/cancel_event/{id}','Api\EventController@cancel_event'); // hủy sự kiện
-    Route::get('/history_regis','Api\EventController@history_register_event'); // lịch sử đăng ký sự kiện
+    Route::get('/checkin/{id}','CheckinController@checkin'); // checkin
 
-    Route::get('/checkin/{id}','Api\CheckinController@checkin'); // checkin
+    Route::prefix('event')->group(function (){
+        Route::get('/list_happen','EventController@list_happen'); // danh sách sự kiện đang diễn ra
+        Route::get('/list','EventController@list_event'); // danh sách sự kiện sắp diễn ra
+        Route::get('/list_happened','EventController@list_happened'); // danh sách sự kiện đã diễn ra
+        Route::get('/detail/{id}','EventController@detail_event'); // chi tiết sự kiện
+        Route::post('/register/{id}','EventController@regis_event'); // đăng kí sự kiện
+        Route::put('/cancel/{id}','EventController@cancel_event'); // hủy sự kiện
+        Route::get('/history_regis','EventController@history_register_event'); // lịch sử đăng ký sự kiện
+    });
 });
 
-Route::prefix('event')->group(function (){
-    Route::get('/list_happen','Api\EventController@list_happen'); // danh sách sự kiện đang diễn ra
-    Route::get('/list','Api\EventController@list_event'); // danh sách sự kiện sắp diễn ra
-    Route::get('/detail/{id}','Api\EventController@detail_event'); // chi tiết sự kiện
-});
+
 
 
 // Route::post('qr_code','Api\CheckinController@qr_code');

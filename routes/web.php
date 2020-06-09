@@ -55,6 +55,7 @@ Route::group(['prefix'=>'admin'],function (){
     Route::get('/event/edit/{id}','Admin\CreateEventController@edit')->name('admin.get.edit.event');
     Route::post('/event/edit/{id}','Admin\CreateEventController@update');
     Route::get('/event/{action}/{id}','Admin\CreateEventController@action')->name('admin.get.action.event');
+    Route::put('/event/cancel/{id}','Admin\CreateEventController@cancel_event')->name('cancel_event');
 
 
     Route::get('/registration','Admin\ListRegisterEventController@index')->name('admin.get.list.registration');
