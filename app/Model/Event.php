@@ -2,16 +2,16 @@
 
 namespace App;
 
-use App\Model\RegistrationEvent;
+use App\Model\RegisterEvent;
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    protected $fillable = [
 
-    ];
+    protected $table = 'events';
+    protected $guarded = ['*'];
 
-    public function registrationEvents(){
-        return $this->hasOne(RegistrationEvent::class);
+    public function registerEvents(){
+        return $this->hasMany(RegisterEvent::class, 'event_id');
     }
 }
