@@ -24,7 +24,15 @@ class RegisterEventController extends Controller
     public function detailEvent($id)
     {
         $detail = Event::find($id);
-        return view('user.detail_event', compact('detail'));
+        if (\Auth::user())
+        {
+            $list = RegistrationEvent::where([
+                'status'    => 0,
+                'user_id'   => \Auth::user()->id,
+                'event_id'  => $id,
+            ])->count();
+        }
+        return view('user.detail_event', compact('detail','list'));
     }
 
     public function registerEvent(Request $request,$id)
@@ -60,5 +68,18 @@ class RegisterEventController extends Controller
             }
         }
         return redirect()->route('login.form')->withErrors(__('You need to be logged in to register for the event'));
+    }
+
+    public function cancelEvent(Request $request,$id)
+    {
+        if (\Auth::user())
+            $cancel = RegistrationEvent::where([
+                'event_id'  => $id,
+                'user_id'   => \Auth::user()->id,
+                'status'    => 0,
+            ])->first();
+        $cancel->status = 1;
+        $cancel->save();
+        return redirect()->back()->with('success',__('You have canceled this event'));
     }
 }

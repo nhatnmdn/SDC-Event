@@ -20,32 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cce8dcc-b514-43d7-9a22-c4a88e1feb9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/lang/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/vi.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CheckinController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CheckinController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Event/RegisterEventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Event/RegisterEventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Requests/ChangePasswordProfileRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/ChangePasswordProfileRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Requests/CreateUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/CreateUserRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Requests/ForgotPasswordRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/ForgotPasswordRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Requests/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/LoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Requests/ResetPasswordRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/ResetPasswordRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/master/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/forgot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/forgot.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/reset_password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/reset_password.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vi.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vi.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/detail_event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/detail_event.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/profile_edit_password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile_edit_password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -261,7 +240,7 @@
       <workItem from="1591620665000" duration="345000" />
       <workItem from="1591621134971" duration="86000" />
       <workItem from="1591664812356" duration="358000" />
-      <workItem from="1591666336228" duration="17200000" />
+      <workItem from="1591666336228" duration="23805000" />
     </task>
     <servers />
   </component>
@@ -310,6 +289,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1591598622351" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1591692627541">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1591692627541" />
     <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591685572730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -322,9 +305,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1591670330534" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591686415359">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591697120635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1591686415359" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1591697120635" />
   </component>
 </project>

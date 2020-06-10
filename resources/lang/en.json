@@ -56,5 +56,7 @@
     "You are already subscribed to this event": "You are already subscribed to this event!",
     "Register success": "Register success!",
     "The number of subscribers is full": "The number of subscribers is full",
-    "You need to be logged in to register for the event": "You need to be logged in to register for the event!"
+    "You need to be logged in to register for the event": "You need to be logged in to register for the event!",
+    "Cancel registration": "Cancel registration",
+    "You have canceled this event": "You have canceled this event!"
 }

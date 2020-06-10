@@ -43,6 +43,7 @@ Route::group(['namespace' => 'Event'], function () {
     Route::get('/', 'RegisterEventController@index')->name('index');
     Route::get('/detail/{id}', 'RegisterEventController@detailEvent')->name('event.detail');
     Route::post('/register_event/{id}','RegisterEventController@registerEvent')->name('event.register');
+    Route::get('/cancel_event/{id}','RegisterEventController@cancelEvent')->name('event.cancel');
 });
 
 

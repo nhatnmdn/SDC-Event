@@ -56,5 +56,7 @@
     "You are already subscribed to this event": "Bạn đã đăng ký sự kiện này rồi!",
     "Register success": "Đăng ký thành công!",
     "The number of subscribers is full": "Số lượng người đăng ký đã đủ",
-    "You need to be logged in to register for the event": "Bạn cần phải đăng nhập trước khi đăng ký sụ kiện!"
+    "You need to be logged in to register for the event": "Bạn cần phải đăng nhập trước khi đăng ký sụ kiện!",
+    "Cancel registration": "Hủy đăng ký",
+    "You have canceled this event": "Bạn đã hủy sự kiện!"
 }
