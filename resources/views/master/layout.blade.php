@@ -90,7 +90,7 @@
     {{--    </section>--}}
 </main>
 <!-- ======= Footer ======= -->
-<footer>
+<footer style="float: left; padding-top: 10px">
     <div>
         <a class="add" href=""><i class="fas fa-map-marker-alt"></i>
             <span>41 Le Duan Str., Hai Chau District, Da Nang City</span>
@@ -122,7 +122,7 @@
 
 <!-- Template Main JS File -->
 <script src="{{asset("user/js/main.js")}}"></script>
-
+@yield('script')
 <script>
     $(".navigation li a").click(function () {
         $(".checkbtn").click()

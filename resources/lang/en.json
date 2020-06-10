@@ -58,5 +58,8 @@
     "The number of subscribers is full": "The number of subscribers is full",
     "You need to be logged in to register for the event": "You need to be logged in to register for the event!",
     "Cancel registration": "Cancel registration",
-    "You have canceled this event": "You have canceled this event!"
+    "You have canceled this event": "You have canceled this event!",
+    "Confirm Password Not Matching Password": "Confirm Password Not Matching Password",
+    "Confirm Password Matching Password": "Confirm Password Matching Password",
+    "Register success. Please login": "Register success. Please login"
 }

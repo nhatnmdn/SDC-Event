@@ -28,7 +28,7 @@ class User extends Authenticatable
 
     public function registrationEvents()
     {
-        return $this->belongsToMany(RegistrationEvent::class);
+        return $this->hasMany(RegistrationEvent::class);
     }
 
     public function login($params)

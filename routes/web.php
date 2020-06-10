@@ -48,7 +48,7 @@ Route::group(['namespace' => 'Event'], function () {
 
 
 
-Route::group(['prefix'=>'admin'],function (){
+Route::group(['prefix'=>'admin', 'middleware' => 'admin.auth'],function (){
     Route::get('/','Admin\AdminController@index')->name('admin.home');
 
     Route::get('/event','Admin\CreateEventController@index')->name('admin.get.list.event');
@@ -61,6 +61,7 @@ Route::group(['prefix'=>'admin'],function (){
 
 
     Route::get('/registration','Admin\ListRegisterEventController@index')->name('admin.get.list.registration');
+    Route::get('/registration/{id}','Admin\ListRegisterEventController@showDetailRegistration')->name('admin.detail.registration');
 
 
     Route::get('/user','Admin\ManagerUserController@index')->name('admin.get.list.user');

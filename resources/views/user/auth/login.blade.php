@@ -1,8 +1,7 @@
 @extends('master.layout')
-@section('title','Login')
+@section('title','Login | Register')
 @section('content')
-    <form class="col-md-6 container" style="padding-top:200px ;margin-top: 80px; height: 660px"
-          action="{{route('login')}}" method="post">
+    <form class="col-md-6 container" style="padding-top:200px ;margin-top: 80px; height: 660px" action="{{route('login')}}" method="post">
         {{csrf_field()}}
         @if(Session::has('messages'))
             <div class="alert alert-success container text-center">{{Session::get('messages')}}</div>
@@ -16,10 +15,10 @@
                 @endforeach
             </div>
         @endif
-        <h1 class="text-center container col-md-4" style="padding: 0">{{__('Login')}}</h1>
+        <h1 class="text-center container col-md-4"style="padding: 0">{{__('Login')}}</h1>
         <div class="form-group row">
-            <div class="col-md-3">
-                <label for="name" class="float-right">Email: </label>
+            <div class="col-xs-3 col-md-3">
+                <label for="" class="float-md-right mt-2">Email: </label>
             </div>
             <div class="col-md-6">
                 <input type="text" id="email" class="form-control" name="email"
