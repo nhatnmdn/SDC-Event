@@ -3,21 +3,21 @@
 @section('content')
     @if(isset($detail))
         <div class="container" style="margin-top: 120px;height: auto">
-            @if(Session::has('success'))
-                <div class="alert alert-success" role="alert">
-                    {{Session::get('success')}}
-                </div>
-            @endif
-            @if(Session::has('warning'))
-                <div class="alert alert-warning col-lg-12" role="alert">
-                    {{Session::get('warning')}}
-                </div>
-            @endif
-            @if(Session::has('danger'))
-                <div class="alert alert-danger" role="alert">
-                    {{Session::get('danger')}}
-                </div>
-            @endif
+                @if(Session::has('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{Session::get('success')}}
+                    </div>
+                @endif
+                @if(Session::has('warning'))
+                    <div class="alert alert-warning col-lg-12" role="alert">
+                        {{Session::get('warning')}}
+                    </div>
+                @endif
+                @if(Session::has('danger'))
+                    <div class="alert alert-danger" role="alert">
+                        {{Session::get('danger')}}
+                    </div>
+                @endif
             <form action="{{route('event.register',$detail->id)}}" method="POST">
                 @csrf
                 <div class="row">
@@ -31,9 +31,19 @@
                         <p><strong>Kết thúc</strong>: {{$detail->end_time}}</p>
                         <p><strong>Địa điểm</strong>: {{$detail->place}}</p>
                         <div>
-                            <button {{Session::get('registered')||isset($registered) ? 'disabled' : ''}} type="submit" class="btn btn-primary"
-                                    style="width: max-content;height: 35px">{{Session::get('registered')||isset($registered) ? 'Đã Đăng ký' : 'Đăng ký'}}
-                            </button>
+{{--                            @if(\Auth::user())--}}
+{{--                                {{ $list = DB::table('registration')->where('user_id',Auth::user()->id)->where('event_id',$detail->id)->count() }}--}}
+{{--                            @endif--}}
+                            @if(isset($list))
+{{--                                {{dd($list)}}--}}
+                                @if($list == 0)
+                                    <button type="submit" class="btn btn-primary" style="width: max-content;height: 35px">{{ __('Register') }}</button>
+                                @else
+                                    <a href="{{ route('event.cancel',$detail->id) }}" class="btn btn-danger" style="width: max-content;height: 35px">{{ __('Cancel registration') }}</a>
+                                @endif
+                            @else
+                                <button type="submit" class="btn btn-primary" style="width: max-content;height: 35px">{{ __('Register') }}</button>
+                            @endif
                         </div>
 
                     </div>

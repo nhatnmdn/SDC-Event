@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
@@ -25,9 +26,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function registerEvents()
+    public function registrationEvents()
     {
-        return $this->hasMany(RegisterEvent::class, 'user_id');
+        return $this->hasMany(RegistrationEvent::class);
     }
 
     public function login($params)

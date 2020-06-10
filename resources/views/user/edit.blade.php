@@ -16,10 +16,10 @@
                 @endforeach
             </div>
         @endif
-        <h1 class="text-center container">Edit Information</h1>
+        <h1 class="text-center container">{{__('Edit information')}}</h1>
         <div class="form-group row">
             <div class="col-md-4">
-                <label for="" class="float-md-right">Name: </label>
+                <label for="" class="float-md-right">{{__('Name')}}: </label>
             </div>
             <div class="col-md-8">
                 <input type="text" class="form-control" name="name"
@@ -47,7 +47,7 @@
         </div>
         <div class="form-group row">
             <div class="col-md-4">
-                <label for="" class="float-md-right">Phone: </label>
+                <label for="" class="float-md-right">{{__('Phone')}}: </label>
             </div>
             <div class="col-md-8">
                 <input type="text" class="form-control" name="phone"
@@ -61,7 +61,7 @@
         </div>
         <div class="form-group row">
             <div class="col-md-4">
-                <label for="" class="float-md-right">Address: </label>
+                <label for="" class="float-md-right">{{__('Address')}}: </label>
             </div>
             <div class="col-md-8">
                 <input type="text" class="form-control" name="address"
@@ -75,7 +75,7 @@
         </div>
         <div class="form-group row">
             <div class="col-md-4">
-                <label for="" class="float-md-right">Avatar: </label>
+                <label for="" class="float-md-right">{{__('Avatar')}}: </label>
             </div>
             <div class="col-md-8">
                 <input type="file" class="form-control" name="avatar"
@@ -87,7 +87,7 @@
                 @endif
             </div>
         </div>
-        <button type="submit" style="margin-right: 130px" class="float-right btn btn-success">Update</button>
-        <a href="{{url()->previous()}}" class="btn btn-info" style="margin-left: 100px;"><i class="fa fa-arrow-left mr-1"></i>Back</a>
+        <button type="submit" style="margin-right: 130px" class="float-right btn btn-success">{{__('Update')}}</button>
+        <a href="{{url()->previous()}}" class="btn btn-info" style="margin-left: 100px;"><i class="fa fa-arrow-left mr-1"></i>{{__('Back')}}</a>
     </form>
 @endsection

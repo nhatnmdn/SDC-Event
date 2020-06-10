@@ -36,7 +36,7 @@ class LoginController extends Controller
             return redirect(route('admin.home'))->with('login','Đăng nhập thành công');
         }
 
-        return back()->withErrors('Wrong Username or Password')->withInput();
+        return back()->withErrors(__('Wrong Username or Password'))->withInput();
 
     }
 

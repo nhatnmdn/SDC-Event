@@ -16,62 +16,83 @@ class EventController extends Controller
     public function list_happen(Request $request)
     {
         $now = date('Y-m-d H:i:s');
-        $list_done = Event::select('id','name','intro','chairman','image','place','start_time','end_time')
-        ->where('start_time','<',$now)->where('end_time','>',$now)
-        ->where('status',0)->get();
+        $list_done = Event::select('id', 'name', 'intro', 'chairman', 'image', 'place', 'start_time', 'end_time')
+            ->where('start_time', '<', $now)->where('end_time', '>', $now)
+            ->where('status', 0)->get();
 
         return response()->json($list_done);
     }
+
     public function list_event(Request $request)
     {
+        $user = $request->user();
         $now = date('Y-m-d H:i:s');
-        $list = Event::select('id','name','intro','chairman','start_time','end_time','image','place')->where('start_time','>',$now)->where('status',0)->get();
+        $regis = RegistrationEvent::where('user_id',$user->id)->get();
+        foreach ($regis as $item)
+            echo $item;
+//        $demo = Event::where('start_time','>',$now)->where('status', 0)->select('name')->get();
+//        dd($demo);
 
-        return response()->json($list);
+//        if ($user) {
+//            $list = Event::where('start_time', '>', $now)->where('status', 0)->get();
+//
+//            return response()->json($list);
+//        }
+
+    }
+
+    public function list_happened(Request $request)
+    {
+        $user = $request->user();
+        $now = date('Y-m-d H:i:s');
+        if ($user) {
+            $list_happened = Event::where('end_time', '<', $now)->where('status', 0)->get();
+            return response()->json($list_happened);
+        }
     }
 
     public function detail_event(Request $request, $id)
     {
         $detail = Event::find($id);
-        return response()->json($detail);
+        $number_register = RegistrationEvent::where('event_id', $id)->count();
+        return response()->json([
+            'detail' => $detail,
+            'number_register' => $number_register,
+        ]);
     }
 
-    public function regis_event(Request $request,$id)
+    public function regis_event(Request $request, $id)
     {
         $event = Event::find($id);
         $list_regis = RegistrationEvent::where([
-            'event_id'  => $id,
-            'status'    => 0
+            'event_id' => $id,
+            'status' => 0
         ])->count();
         $user = $request->user();
         $register = new RegistrationEvent();
-        if($user)
-        {
+        if ($user) {
             $list = RegistrationEvent::where([
-                'user_id'   => $user->id,
-                'event_id'  => $event->id,
-                'status'    => 0
+                'user_id' => $user->id,
+                'event_id' => $event->id,
+                'status' => 0
             ])->first();
             $register->user_id = $user->id;
             $register->event_id = $event->id;
             $register->code = Str::random(60);
-            if(isset($list))
-            {
+            if (isset($list)) {
                 return response()->json([
                     'message' => 'Mỗi người chỉ được phép đăng ký 1 lần thôi nhé!',
                 ]);
-            }else
-            {
-                if($event->max_register > $list_regis)
-                {
+            } else {
+                if ($event->max_register > $list_regis) {
                     $register->save();
                     return response()->json([
-                        'messsage' => 'Đăng ký thành công!',
+                        'message' => 'Đăng ký thành công!',
                         'event' => $register,
                     ]);
                 }
                 return response()->json([
-                    'messsage' => 'Số lượng người đăng ký đã đủ. Mời bạn quay lại vào sự kiện sau!',
+                    'message' => 'Số lượng người đăng ký đã đủ. Mời bạn quay lại vào sự kiện sau!',
                 ]);
             }
         }
@@ -84,12 +105,11 @@ class EventController extends Controller
     {
         $user = $request->user();
         $regis = RegistrationEvent::where([
-            'user_id'   => $user->id,
-            'event_id'  => $id,
-            'status'    => 0
+            'user_id' => $user->id,
+            'event_id' => $id,
+            'status' => 0
         ])->first();
-        if($regis)
-        {
+        if ($regis) {
             $regis->status = 1;
             $regis->save();
             return response()->json([
@@ -107,13 +127,13 @@ class EventController extends Controller
         $user = $request->user();
         // $list = RegistrationEvent::where('user_id',$user->id)->get();
         $list = \DB::table('registration')
-        ->join('events', 'registration.event_id', '=', 'events.id')
-        ->where([
-            'user_id' => $user->id,
-            'registration.status'  => 0,
-        ])
-        ->select('registration.id','registration.user_id','registration.event_id','registration.status','registration.checkin','events.name','events.chairman','events.start_time','events.end_time')
-        ->get();
+            ->join('events', 'registration.event_id', '=', 'events.id')
+            ->where([
+                'user_id' => $user->id,
+                'registration.status' => 0,
+            ])
+            ->select('registration.id', 'registration.user_id', 'registration.event_id', 'registration.status', 'registration.checkin', 'events.name', 'events.chairman', 'events.start_time', 'events.end_time', 'events.image')
+            ->get();
 
         return response()->json($list);
     }

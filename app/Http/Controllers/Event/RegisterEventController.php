@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\Event;
 
 use App\Http\Controllers\Controller;
-use App\Model\RegisterEvent;
-use Auth;
+use App\Model\RegistrationEvent;
 use Illuminate\Http\Request;
 use App\Event;
 use Illuminate\Support\Str;
@@ -25,36 +24,29 @@ class RegisterEventController extends Controller
     public function detailEvent($id)
     {
         $detail = Event::find($id);
-        if (Auth::check()) {
-            $user = Auth::user();
-            $list = RegisterEvent::where([
-                'user_id'  => $user->id,
-                'event_id' => $detail->id,
-                'status'   => 0
-            ])->first();
-            if ($list) {
-                $registered = true;
-                return view('user.detail_event', compact('detail', 'registered'));
-            }
+        if (\Auth::user())
+        {
+            $list = RegistrationEvent::where([
+                'status'    => 0,
+                'user_id'   => \Auth::user()->id,
+                'event_id'  => $id,
+            ])->count();
         }
-
-        return view('user.detail_event', compact('detail'));
+        return view('user.detail_event', compact('detail','list'));
     }
 
     public function registerEvent(Request $request,$id)
     {
         $event = Event::find($id);
-        $list_register = RegisterEvent::where([
+        $list_register = RegistrationEvent::where([
            'event_id' => $id,
            'status'   => 0
         ])->count();
-
         $user = $request->user();
-
-        $register = new RegisterEvent();
+        $register = new RegistrationEvent();
         if($user)
         {
-            $list = RegisterEvent::where([
+            $list = RegistrationEvent::where([
                 'user_id'   => $user->id,
                 'event_id'  => $event->id,
                 'status'    => 0
@@ -64,17 +56,30 @@ class RegisterEventController extends Controller
             $register->code = Str::random(60);
             if(isset($list))
             {
-                return redirect()->back()->with('warning','Mỗi người chỉ được đăng kí một lần !');
+                return redirect()->back()->with('warning', __('You are already subscribed to this event'));
             }else
             {
                 if($event->max_register > $list_register)
                 {
                     $register->save();
-                    return redirect()->back()->with(['success' => 'Đăng kí thành công !', 'registered' => true]);
+                    return redirect()->back()->with('success',__('Register success'));
                 }
-                return redirect()->back()->with('danger','Số lượng người đăng kí đã dủ !');
+                return redirect()->back()->with('danger',__('The number of subscribers is full'));
             }
         }
-        return redirect()->route('login.form')->withErrors('Bạn cần đăng nhập để để tham gia đăng kí sự kiện');
+        return redirect()->route('login.form')->withErrors(__('You need to be logged in to register for the event'));
+    }
+
+    public function cancelEvent(Request $request,$id)
+    {
+        if (\Auth::user())
+            $cancel = RegistrationEvent::where([
+                'event_id'  => $id,
+                'user_id'   => \Auth::user()->id,
+                'status'    => 0,
+            ])->first();
+        $cancel->status = 1;
+        $cancel->save();
+        return redirect()->back()->with('success',__('You have canceled this event'));
     }
 }

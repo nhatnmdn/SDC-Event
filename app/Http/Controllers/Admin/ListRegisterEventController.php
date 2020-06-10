@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Model\RegisterEvent;
+use App\Model\RegistrationEvent;
 
 class ListRegisterEventController extends Controller
 {
     public function index()
     {
-        $query = RegisterEvent::query();
+        $query = RegistrationEvent::query();
 
         $lists = $query->with('users', 'events')->orderByDesc('created_at')->paginate( 5);
 
@@ -18,7 +18,7 @@ class ListRegisterEventController extends Controller
 
     public function showDetailRegistration($id)
     {
-        $registration = RegisterEvent::with('events')->find($id);
+        $registration = RegistrationEvent::with('events')->find($id);
 
         return view('admin.registration.detail', compact('registration'));
     }

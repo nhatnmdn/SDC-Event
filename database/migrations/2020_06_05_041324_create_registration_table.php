@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRegisterEventsTable extends Migration
+class CreateRegistrationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateRegisterEventsTable extends Migration
      */
     public function up()
     {
-        Schema::create('register_events', function (Blueprint $table) {
+        Schema::create('registration', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('status')->default(0);
             $table->boolean('checkin')->nullable();

@@ -1,901 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4cce8dcc-b514-43d7-9a22-c4a88e1feb9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Helpers/GlobalHelper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Helpers/function.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminLoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CreateEventController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ListRegisterEventController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ManagerPersonelController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ManagerUserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ChangeAccountController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CheckinController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/EventController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/NotificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/PasswordResetController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UploadImageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Event/RegisterEventController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/AuthenticationMiddleware.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AdminRequestCreateEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Mail/ResetPasswordMail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Device_token.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/PasswordReset.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notifications/PasswordResetRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notifications/PasswordResetSuccess.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Requests/ChangePasswordProfileRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Requests/CreateUserRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Requests/EditUserRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Requests/ForgotPasswordRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Requests/LoginRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Requests/ResetPasswordRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_02_033604_create_password_resets_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/demo.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/main.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/apple-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/button-click.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/login-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/logo-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/logo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/mark.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/profile-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/user-medium.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/user1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/user2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/user4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/user5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/vin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/scripts/klorofil-common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/chartist/css/chartist-custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/chartist/css/chartist-custom.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/chartist/css/chartist.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/chartist/css/chartist.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/chartist/js/chartist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/chartist/js/chartist.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/chartist/map/chartist.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/chartist/map/chartist.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/chartist/scss/chartist.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/jquery-slimscroll/jquery.slimscroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/jquery.easy-pie-chart/angular.easypiechart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/jquery.easy-pie-chart/angular.easypiechart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/jquery.easy-pie-chart/easypiechart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/jquery.easy-pie-chart/easypiechart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/jquery/jquery.min.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/linearicons/fonts/Linearicons-Free.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/linearicons/fonts/Linearicons-Free.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/linearicons/fonts/Linearicons-Free.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/linearicons/fonts/Linearicons-Free.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/linearicons/fonts/Linearicons-Free.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/linearicons/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/toastr/toastr.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/toastr/toastr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/toastr/toastr.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/vendor/toastr/toastr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatar/1/avatar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatar/1/hinh-dep-19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatar/2/avatar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatar/2/mark-zuckerberg-time-100-2019.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/CHANGES.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/adapters/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/build-config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/ckeditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/contents.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/bn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/bs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/cy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/de-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/en-au.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/en-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/en-gb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/eo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/es-mx.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/fo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/fr-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/gu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/hi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/ka.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/km.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/ku.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/mn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/ms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/no.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/oc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/pt-br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/si.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/sq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/sr-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/tt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/ug.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/zh-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/lang/zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/en-au.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/es-mx.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/oc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/about/dialogs/about.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/about/dialogs/logo_ckeditor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/clipboard/dialogs/paste.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/colordialog/dialogs/colordialog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/colordialog/dialogs/colordialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/copyformatting/cursors/cursor-disabled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/copyformatting/cursors/cursor.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/copyformatting/styles/copyformatting.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/dialog/dialogDefinition.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/dialog/styles/dialog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/div/dialogs/div.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/find/dialogs/find.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/flash/dialogs/flash.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/flash/images/placeholder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/forms/dialogs/button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/forms/dialogs/checkbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/forms/dialogs/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/forms/dialogs/hiddenfield.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/forms/dialogs/radio.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/forms/dialogs/select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/forms/dialogs/textarea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/forms/dialogs/textfield.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/forms/images/hiddenfield.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/icons_hidpi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/iframe/dialogs/iframe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/iframe/images/placeholder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/image/dialogs/image.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/image/images/noimage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/link/dialogs/anchor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/link/dialogs/link.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/link/images/anchor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/link/images/hidpi/anchor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/liststyle/dialogs/liststyle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/magicline/images/hidpi/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/magicline/images/icon-rtl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/magicline/images/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/pagebreak/images/pagebreak.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/pastefromgdocs/filter/default.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/pastefromword/filter/default.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/pastetools/filter/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/pastetools/filter/image.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/preview/images/pagebreak.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/preview/preview.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/preview/styles/screen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/scayt/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/scayt/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/scayt/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/scayt/dialogs/dialog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/scayt/dialogs/options.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/scayt/dialogs/toolbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/showblocks/images/block_address.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/showblocks/images/block_blockquote.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/showblocks/images/block_div.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/showblocks/images/block_h1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/showblocks/images/block_h2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/showblocks/images/block_h3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/showblocks/images/block_h4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/showblocks/images/block_h5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/showblocks/images/block_h6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/showblocks/images/block_p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/showblocks/images/block_pre.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/dialogs/smiley.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/angel_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/angel_smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/angry_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/angry_smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/broken_heart.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/broken_heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/confused_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/confused_smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/cry_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/cry_smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/devil_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/devil_smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/embaressed_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/embarrassed_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/embarrassed_smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/envelope.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/envelope.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/heart.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/kiss.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/kiss.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/lightbulb.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/lightbulb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/omg_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/omg_smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/regular_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/regular_smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/sad_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/sad_smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/shades_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/shades_smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/teeth_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/teeth_smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/thumbs_down.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/thumbs_down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/thumbs_up.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/thumbs_up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/tongue_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/tongue_smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/tounge_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/wink_smile.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/smiley/images/wink_smile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/cy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/en-au.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/en-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/eo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/es-mx.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/km.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/ku.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/no.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/oc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/si.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/sq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/sr-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/tt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/ug.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/lang/zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/specialchar/dialogs/specialchar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/table/dialogs/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/tableselection/styles/tableselection.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/tabletools/dialogs/tableCell.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/templates/dialogs/templates.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/templates/dialogs/templates.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/templates/templates/default.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/templates/templates/images/template1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/templates/templates/images/template2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/templates/templates/images/template3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/widget/images/handle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/wsc/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/wsc/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/wsc/dialogs/ciframe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/wsc/dialogs/wsc.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/wsc/dialogs/wsc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/wsc/dialogs/wsc_ie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/css/samples.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/img/github-top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/img/header-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/img/header-separator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/img/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/img/navigation-tip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/js/sample.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/js/sf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/ajax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/api.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/appendto.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/assets/inlineall/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/assets/posteddata.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/assets/sample.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/assets/uilanguages/languages.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/datafiltering.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/dialog/assets/my_dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/dialog/dialog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/divreplace.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/enterkey/enterkey.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.fla" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.swf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/htmlwriter/outputforflash.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/htmlwriter/outputhtml.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/inlineall.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/inlinebycode.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/inlinetextarea.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/jquery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/magicline/magicline.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/readonly.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/replacebyclass.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/replacebycode.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/sample.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/sample.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/sample_posteddata.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/tabindex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/toolbar/toolbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/uicolor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/uilanguages.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/wysiwygarea/fullpage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/old/xhtmlstyle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/css/fontello.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/font/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/font/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/font/fontello.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/font/fontello.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/font/fontello.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/font/fontello.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/lib/codemirror/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/dialog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/dialog_ie.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/dialog_ie8.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/dialog_iequirks.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/editor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/editor_gecko.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/editor_ie.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/editor_ie8.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/editor_iequirks.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/icons_hidpi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/images/arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/images/hidpi/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/images/hidpi/lock-open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/images/hidpi/lock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/images/hidpi/refresh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/images/lock-open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/images/lock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/images/refresh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/images/spinner.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/skins/moono-lisa/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ckeditor/vendor/promise.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__1-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__186370945.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__18e56656-dd75-4f50-a83d-1cfdc07bca35.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__24-03-16_pic1_large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__3 lã½ do ä‘á»ƒ-02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__62606-original.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__accelerate-career-growth2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__banner-sm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__best-gifts-for-software-developers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__cover-img-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__du-hoc-han-quoc-nganh-thiet-ke-do-hoa-tam-nhin-cho-tuong-lai.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__globaltech-android1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__how-to-get-start-game-development-compan-1024x576.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__how-to-monetize-your-game.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__iphone-game-development-services.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__javascript-la-gi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__matt-gretton-gkakl-handbook-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__matt-gretton-gkakl-handbook-cover.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__mobile-01-01_a261dee2c1024dcb90b38cf40709aec6_grande.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__mobile-app-development.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__techzones-sam-laptop-msi-nhan-code-game-call-of-duty-black-ops-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__toptitle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__tải xuống.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__unnamed.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/042020-06-04__unnamed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__accelerate-career-growth2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__mobile-app-development.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__toptitle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/css/util.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-ExtraLightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/Montserrat-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/montserrat/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-ExtraBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-ExtraLightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/poppins/Poppins-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-ExtraBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-ExtraLightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/fonts/raleway/Raleway-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/images/icons/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/images/icons/icon-google.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/images/img-01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/images/java.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/images/logo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/images/sdc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/clients/client-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/clients/client-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/clients/client-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/clients/client-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/clients/client-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/clients/client-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/cta-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/hero-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/logo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/portfolio/portfolio-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/portfolio/portfolio-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/portfolio/portfolio-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/portfolio/portfolio-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/portfolio/portfolio-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/portfolio/portfolio-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/portfolio/portfolio-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/portfolio/portfolio-8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/portfolio/portfolio-9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/portfolio/portfolio-details-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/portfolio/portfolio-details-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/portfolio/portfolio-details-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/skills.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/team/team-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/team/team-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/team/team-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/team/team-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/img/why-us.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/js/mainlogin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/aos/aos.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/aos/aos.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/boxicons/css/animations.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/boxicons/css/boxicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/boxicons/css/boxicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/boxicons/css/transformations.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/boxicons/fonts/boxicons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/boxicons/fonts/boxicons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/boxicons/fonts/boxicons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/boxicons/fonts/boxicons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/boxicons/fonts/boxicons.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/icofont/fonts/icofont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/icofont/fonts/icofont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/icofont/icofont.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/isotope-layout/isotope.pkgd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/isotope-layout/isotope.pkgd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/jquery.easing/jquery.easing.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/jquery/jquery.min.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/owl.carousel/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/owl.carousel/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/owl.carousel/assets/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/owl.carousel/assets/owl.carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/owl.carousel/assets/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/owl.carousel/assets/owl.theme.default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/owl.carousel/assets/owl.theme.default.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/owl.carousel/assets/owl.theme.green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/owl.carousel/assets/owl.theme.green.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/owl.carousel/assets/owl.video.play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/owl.carousel/owl.carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/owl.carousel/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/php-email-form/validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/remixicon/remixicon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/remixicon/remixicon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/remixicon/remixicon.glyph.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/remixicon/remixicon.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/remixicon/remixicon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/remixicon/remixicon.symbol.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/remixicon/remixicon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/remixicon/remixicon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/remixicon/remixicon.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/venobox/venobox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/venobox/venobox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/venobox/venobox.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/venobox/venobox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/vendor/waypoints/jquery.waypoints.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/event/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/event/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/event/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/event/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/modal/modal-add-personel.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/modal/modal-del-event.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/modal/modal-del-personel.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/personel/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/personel/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/personel/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/personel/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/registration/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/mail/send_mail_password.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/master/layout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/auth/forgot.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/auth/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/auth/reset_password.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/detail_event.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/profile.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/profile_edit_password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LanguageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Language.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/RegistrationEvent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatar/1/8625308f1624185a1ecc5e041e929d49583feed38c55e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatar/1/ngay-hoi-bia-huda-tai-sun-world-danang-wonders.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__yeuthich2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__yeuthich5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__yeuthich6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/082020-06-08__countdown-party-2020-da-nang.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/082020-06-08__gea-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/082020-06-08__honda-youth-fest(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/082020-06-08__ngay-hoi-bia-huda-tai-sun-world-danang-wonders.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/092020-06-09__countdown-party-2020-da-nang.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/092020-06-09__gea-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/092020-06-09__ngay-hoi-bia-huda-tai-sun-world-danang-wonders.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/vi.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/SDC-EVENT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SDC-EVENT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/GlobalHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/GlobalHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CreateEventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CreateEventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ListRegisterEventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ListRegisterEventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CheckinController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CheckinController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UploadImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UploadImageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Event/RegisterEventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Event/RegisterEventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckForMaintenanceMode.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckForMaintenanceMode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustHosts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustHosts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/RegistrationEvent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/RegisterEvent.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Requests/ChangePasswordProfileRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/ChangePasswordProfileRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Requests/CreateUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/CreateUserRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Requests/ForgotPasswordRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/ForgotPasswordRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Requests/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/LoginRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Requests/ResetPasswordRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/ResetPasswordRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/hashing.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/hashing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/logging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/queue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/database/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/EventFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/EventFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_18_092326_create_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_18_092326_create_roles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_18_092404_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_18_092404_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_18_092430_create_events_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_18_092430_create_events_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_18_092446_create_registration_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/EventTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/EventsTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/public/web.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_05_041324_create_register_events_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_05_041324_create_registration_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/event/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/event/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/modal/modal-del-event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/modal/modal-del-event.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/master/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/forgot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/forgot.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/reset_password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/reset_password.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/detail_event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/detail_event.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/profile_edit_password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile_edit_password.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/app/public/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/testing/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/testing/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -907,6 +92,13 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -1034,6 +226,9 @@
       <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
       <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
       <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/vendor/simplesoftwareio/simple-qrcode" />
     </include_path>
   </component>
   <component name="ProjectId" id="1cWMTizgECaUtNfD7KQYDhPvVqj" />
@@ -1041,15 +236,17 @@
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/registration" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -1058,7 +255,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/admin/registration" />
+      <recent name="C:\Users\Popper\Desktop\New folder (3)\SDC-Event\public\user\images" />
+      <recent name="C:\Users\Popper\Desktop\New folder (3)\SDC-Event\resources\views\admin" />
+      <recent name="C:\Users\Popper\Desktop\New folder (3)\SDC-Event\app\Http\Requests" />
+      <recent name="C:\Users\Popper\Desktop\New folder (3)\SDC-Event\app\Http\Controllers" />
+      <recent name="C:\Users\Popper\Desktop\New folder (3)\SDC-Event\app\Http\Controllers\Admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -1078,27 +279,54 @@
       <option name="presentableId" value="Default" />
       <updated>1590639905116</updated>
       <workItem from="1590639906826" duration="802000" />
-      <workItem from="1591580320935" duration="7586000" />
-      <workItem from="1591687151829" duration="3781000" />
-      <workItem from="1591771192272" duration="4504000" />
+      <workItem from="1590998598035" duration="2321000" />
+      <workItem from="1591270074589" duration="78000" />
+      <workItem from="1591270802904" duration="2128000" />
+      <workItem from="1591273814415" duration="311000" />
+      <workItem from="1591274154742" duration="16000" />
+      <workItem from="1591274172740" duration="14631000" />
+      <workItem from="1591291124760" duration="286000" />
+      <workItem from="1591319245326" duration="388000" />
+      <workItem from="1591579703433" duration="24943000" />
+      <workItem from="1591610572509" duration="59000" />
+      <workItem from="1591610770848" duration="33000" />
+      <workItem from="1591610818675" duration="25000" />
+      <workItem from="1591610857359" duration="14000" />
+      <workItem from="1591611000665" duration="746000" />
+      <workItem from="1591611912107" duration="266000" />
+      <workItem from="1591620665000" duration="345000" />
+      <workItem from="1591621134971" duration="86000" />
+      <workItem from="1591664812356" duration="358000" />
+      <workItem from="1591666336228" duration="23805000" />
+      <workItem from="1591751618126" duration="301000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="451" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1591343917586">
+    <state x="70" y="27" width="476" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590999575925">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="451" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/70.27.1296.741@70.27.1296.741" timestamp="1591343917586" />
-    <state x="170" y="127" width="1096" height="541" key="DiffContextDialog" timestamp="1591344114493">
-      <screen x="70" y="27" width="1296" height="741" />
+    <state x="70" y="27" width="476" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/70.27.1296.741@70.27.1296.741" timestamp="1590999575925" />
+    <state x="454" y="126" width="424" height="491" key="FileChooserDialogImpl" timestamp="1591666660135">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="170" y="127" width="1096" height="541" key="DiffContextDialog/70.27.1296.741@70.27.1296.741" timestamp="1591344114493" />
-    <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1590640903264">
-      <screen x="70" y="27" width="1296" height="741" />
-    </state>
+    <state x="454" y="126" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591666660135" />
     <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1590640903264" />
     <state width="1250" height="164" key="GridCell.Tab.0.bottom" timestamp="1590640052339">
       <screen x="70" y="27" width="1296" height="741" />
@@ -1116,17 +344,29 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state width="1250" height="164" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1590640052338" />
-    <state x="363" y="136" width="709" height="522" key="find.popup" timestamp="1591327319005">
-      <screen x="70" y="27" width="1296" height="741" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1591598622351">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="363" y="136" width="709" height="522" key="find.popup/70.27.1296.741@70.27.1296.741" timestamp="1591327319005" />
-    <state x="382" y="174" key="run.anything.popup" timestamp="1591333649254">
-      <screen x="70" y="27" width="1296" height="741" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1591598622351" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1591692627541">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="382" y="174" key="run.anything.popup/70.27.1296.741@70.27.1296.741" timestamp="1591333649254" />
-    <state x="382" y="40" width="670" height="676" key="search.everywhere.popup" timestamp="1591690433222">
-      <screen x="70" y="27" width="1296" height="741" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1591692627541" />
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591685572730">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="382" y="40" width="670" height="676" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1591690433222" />
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1591685572730" />
+    <state x="390" y="68" width="585" height="592" key="find.popup" timestamp="1591666707305">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="68" width="585" height="592" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1591666707305" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1591670330534">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1591670330534" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591697120635">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1591697120635" />
   </component>
 </project>

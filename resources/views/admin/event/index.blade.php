@@ -50,7 +50,11 @@
                                             <td>{{$item->start_time}}</td>
                                             <td>{{$item->end_time}}</td>
                                             <td>{{$item->intro}}</td>
-                                            <td><a class="label label-danger">Hủy</a></td>
+                                            @if($item->status == 0)
+                                                <td><a href="{{ route('cancel_event',$item->id) }}" class="label label-danger">Hủy</a></td>
+                                            @else
+                                                <td><a class="label label-danger">Đã hủy</a></td>
+                                            @endif
                                             <td>
                                                 <?php
                                                 $now = new DateTime("");
@@ -89,6 +93,7 @@
             </div>
         </div>
     </div>
+
     @include("admin.modal.modal-del-event")
 
 @endsection

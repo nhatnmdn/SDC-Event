@@ -54,19 +54,24 @@
                 <ul class="bg-light">
                     <li><a style="text-decoration: none;" href="#1">Software Developer</a></li>
                     <li><a style="text-decoration: none;" href="#2">Education</a></li>
-                    <li><a style="text-decoration: none;" href="#3">Business</a></li>
+                    <li class="dropdown"><a style="text-decoration: none;" href="#3">{{ __('Language') }}</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ route('language',['vi']) }}">VI</a></li>
+                            <li><a href="{{ route('language',['en']) }}">EN</a></li>
+                        </ul>
+                    </li>
                     @guest()
-                        <li><a style="text-decoration: none;" href="{{route('login.form')}}">Login / Register</a></li>
+                        <li><a style="text-decoration: none;" href="{{route('login.form')}}">{{ __('Sign In / Up') }}</a></li>
                     @endguest()
                     @auth()
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
                             <ul class="dropdown-menu">
                                 @if(!\App\Helpers\GlobalHelper::checkUserRole())
-                                    <li><a href="{{route('admin.home')}}"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+                                    <li><a href="{{route('admin.home')}}"><i class="fas fa-home"></i> <span>{{__('Dashboard')}}</span></a></li>
                                 @endif
-                                <li><a href="{{route('profile')}}"><i class="fas fa-user-circle"></i> <span>Profile</span></a></li>
-                                <li><a href="{{route('logout')}}"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
+                                <li><a href="{{route('profile')}}"><i class="fas fa-user-circle"></i> <span>{{__('Profile')}}</span></a></li>
+                                <li><a href="{{route('logout')}}"><i class="fas fa-sign-out-alt"></i> <span>{{__('Logout')}}</span></a></li>
                             </ul>
                         </li>
                     @endauth
@@ -116,10 +121,8 @@
 <script src="{{asset("user/vendor/aos/aos.js")}}"></script>
 
 <!-- Template Main JS File -->
-@yield('script')
-
 <script src="{{asset("user/js/main.js")}}"></script>
-
+@yield('script')
 <script>
     $(".navigation li a").click(function () {
         $(".checkbtn").click()
