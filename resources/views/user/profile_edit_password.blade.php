@@ -16,13 +16,13 @@
                 @endforeach
             </div>
         @endif
-        <h1 class="text-center container">Change Password</h1>
+        <h1 class="text-center container">{{__('Change password')}}</h1>
         <div class="row form-group">
             <div class="col-md-4">
-                <label for="password" class="float-right">Current password: </label>
+                <label for="password" class="float-right">{{__('Current password')}}: </label>
             </div>
             <div class="col-md-6">
-                <input type="password" class="form-control mb-1" name="current_password" placeholder="Enter current Password">
+                <input type="password" class="form-control mb-1" name="current_password" placeholder="{{__('Enter current Password')}}">
                 @if($errors->any())
                     @foreach($errors->get('current_password') as $messages)
                         <i style="color: red; font-size: 90%; font-family: sans-serif">*{{$messages}}
@@ -33,10 +33,10 @@
         </div>
         <div class="form-group row">
             <div class="col-md-4">
-                <label for="password" class="float-right">New password: </label>
+                <label for="password" class="float-right">{{__('New password')}}: </label>
             </div>
             <div class="col-md-6">
-                <input type="password" id="new_password" class="form-control" name="new_password" placeholder="Enter new Password" autofocus>
+                <input type="password" id="new_password" class="form-control" name="new_password" placeholder="{{__('Enter new Password')}}" autofocus>
                 @if($errors->any())
                     @foreach($errors->get('new_password') as $messages)
                         <i style="color: red; font-size: 90%; font-family: sans-serif">*{{$messages}}
@@ -47,10 +47,10 @@
         </div>
         <div class="form-group row">
             <div class="col-md-4">
-                <label for="password_confirmation" class="float-right">Confirm password: </label>
+                <label for="password_confirmation" class="float-right">{{__('Confirm password')}}: </label>
             </div>
             <div class="col-md-6">
-                <input type="password" id="password_confirmation" class="form-control" name="password_confirmation" placeholder="Confirmation Password">
+                <input type="password" id="password_confirmation" class="form-control" name="password_confirmation" placeholder="{{__('Enter Confirm password')}}">
                 @if($errors->any())
                     @foreach($errors->get('password_confirmation') as $messages)
                         <i style="color: red; font-size: 90%; font-family: sans-serif">*{{$messages}}
@@ -59,7 +59,7 @@
                 @endif
             </div>
         </div>
-        <button type="submit" style="margin-right: 130px" class="float-right btn btn-success">Confirm</button>
-        <a href="{{url()->previous()}}" class="btn btn-info" style="margin-left: 100px;"><i class="fa fa-arrow-left mr-1"></i>Back</a>
+        <button type="submit" style="margin-right: 130px" class="float-right btn btn-success">{{__('Confirm')}}</button>
+        <a href="{{url()->previous()}}" class="btn btn-info" style="margin-left: 100px;"><i class="fa fa-arrow-left mr-1"></i>{{__('Back')}}</a>
     </form>
 @endsection

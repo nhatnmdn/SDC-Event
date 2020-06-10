@@ -14,7 +14,7 @@
                 @endforeach
             </div>
         @endif
-        <h1 class="text-center container col-md-4">Profile</h1>
+        <h1 class="text-center container col-md-4">{{__('Profile')}}</h1>
         <div class="container col-md-10" style=" height: 300px">
             <div class="col-md-4" style="   float: left; height: 300px">
                 <div class="row container">
@@ -22,14 +22,14 @@
                         <img src="{{asset($userProfile->avatar)}}" style="border-radius: 100px" width="150" height="150">
                     </div>
                     <div class="container col-md-5">
-                        <label for="" class="text-center">Avatar </label>
+                        <label for="" class="text-center">{{__('Avatar')}} </label>
                     </div>
                 </div>
             </div>
             <div class="col-md-8" style="float: right; height: 300px">
                 <div class="row">
                     <div class="col-md-3">
-                        <label>Username:</label>
+                        <label>{{__('Full name')}}:</label>
                     </div>
                     <div class="col-md-9 text-center">
                         <p>{{$userProfile->name}}</p>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <label>Phone:</label>
+                        <label>{{__('Phone')}}:</label>
                     </div>
                     <div class="col-md-9 text-center">
                         <p>{{$userProfile->phone}}</p>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <label>Address:</label>
+                        <label>{{__('Address')}}:</label>
                     </div>
                     <div class="col-md-9 text-center">
                         <p>{{$userProfile->address}}</p>
@@ -62,10 +62,10 @@
             </div>
             <div class="card-footer row" style="background: white; border: none">
                 <div class="col-md-6 mb-2">
-                    <a class="btn btn-primary col-md-12" href="{{route('profile.edit.form')}}">Edit information</a>
+                    <a class="btn btn-primary col-md-12" href="{{route('profile.edit.form')}}">{{__('Edit information')}}</a>
                 </div>
                 <div class="col-md-6">
-                    <a class="btn btn-primary col-md-12" href="{{route('edit.password',['id' => $userProfile->id])}}">Change password</a>
+                    <a class="btn btn-primary col-md-12" href="{{route('edit.password',['id' => $userProfile->id])}}">{{__('Change password')}}</a>
                 </div>
             </div>
         </div>

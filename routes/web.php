@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('language/{language}','LanguageController@index')->name('language');
 
 Route::group(['namespace' => 'Auth'], function () {
     Route::get('/login', 'LoginController@showLoginForm')->name('login.form');
@@ -42,6 +43,7 @@ Route::group(['namespace' => 'Event'], function () {
     Route::get('/', 'RegisterEventController@index')->name('index');
     Route::get('/detail/{id}', 'RegisterEventController@detailEvent')->name('event.detail');
     Route::post('/register_event/{id}','RegisterEventController@registerEvent')->name('event.register');
+    Route::get('/cancel_event/{id}','RegisterEventController@cancelEvent')->name('event.cancel');
 });
 
 
@@ -55,6 +57,7 @@ Route::group(['prefix'=>'admin'],function (){
     Route::get('/event/edit/{id}','Admin\CreateEventController@edit')->name('admin.get.edit.event');
     Route::post('/event/edit/{id}','Admin\CreateEventController@update');
     Route::get('/event/{action}/{id}','Admin\CreateEventController@action')->name('admin.get.action.event');
+    Route::put('/event/cancel/{id}','Admin\CreateEventController@cancel_event')->name('cancel_event');
 
 
     Route::get('/registration','Admin\ListRegisterEventController@index')->name('admin.get.list.registration');

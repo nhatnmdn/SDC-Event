@@ -85,5 +85,15 @@ class CreateEventController extends Controller
         }
         return redirect()->back();
     }
+
+    public function cancel_event(Request $request,$id)
+    {
+        $cancel = Event::find($id);
+        $cancel->status = Event::Public;
+        $cancel->save();
+
+        return redirect()->back();
+    }
+
 }
 
