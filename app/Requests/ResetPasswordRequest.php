@@ -31,8 +31,8 @@ class ResetPasswordRequest extends FormRequest
     public function messages()
     {
         return [
-            'password.required' => __('The new password field is required'),
-            'password.confirmed' => __('The password confirmation does not match')
+            'password.required'  => __('The new password field is required'),
+            'password.confirmed' => __('The password confirmation does not match'),
         ];
     }
 }

@@ -1,7 +1,7 @@
 @extends('master.layout')
 @section('title','Register')
 @section('content')
-    <form action="{{route('register')}}" method="post" class="col-md-6 container" role="form" style="padding-top:100px ;margin-top: 80px; height: 660px">
+    <form action="{{route('register')}}" method="post" class="col-md-6 container" role="form" style="padding-top:190px ;margin-top: 80px; height: auto;padding-bottom: 30px; float: left">
         @csrf
         <h1 class="text-center col-lg-12 col-md-5">{{__('Register')}}</h1>
         <div class="form-group row">

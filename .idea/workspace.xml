@@ -20,67 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cce8dcc-b514-43d7-9a22-c4a88e1feb9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LanguageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Language.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/RegistrationEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatar/1/8625308f1624185a1ecc5e041e929d49583feed38c55e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatar/1/ngay-hoi-bia-huda-tai-sun-world-danang-wonders.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__images.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__yeuthich2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__yeuthich5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__yeuthich6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/082020-06-08__countdown-party-2020-da-nang.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/082020-06-08__gea-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/082020-06-08__honda-youth-fest(1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/082020-06-08__ngay-hoi-bia-huda-tai-sun-world-danang-wonders.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/092020-06-09__countdown-party-2020-da-nang.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/092020-06-09__gea-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/092020-06-09__ngay-hoi-bia-huda-tai-sun-world-danang-wonders.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/vi.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SDC-EVENT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SDC-EVENT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Helpers/GlobalHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/GlobalHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/function.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminLoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CreateEventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CreateEventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ListRegisterEventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ListRegisterEventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CheckinController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CheckinController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/EventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UploadImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UploadImageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ManagerPersonelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ManagerPersonelController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ManagerUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ManagerUserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Event/RegisterEventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Event/RegisterEventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LanguageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LanguageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/RegisterEvent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Language.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Language.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AdminRequestCreateEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AdminRequestCreateEvent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Requests/ChangePasswordProfileRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/ChangePasswordProfileRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Requests/CreateUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/CreateUserRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Requests/EditUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/EditUserRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Requests/ForgotPasswordRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/ForgotPasswordRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Requests/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/LoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Requests/ResetPasswordRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/ResetPasswordRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/EventFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/EventFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_05_041324_create_register_events_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_05_041324_create_registration_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/event/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/event/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/modal/modal-del-event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/modal/modal-del-event.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vi.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vi.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/master/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/forgot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/forgot.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/reset_password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/reset_password.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/detail_event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/detail_event.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/profile_edit_password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile_edit_password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

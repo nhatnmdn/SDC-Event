@@ -5,91 +5,100 @@ namespace App\Http\Controllers\Admin;
 use App\Event;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminRequestCreateEvent;
-use Illuminate\Http\Request;
 
 class CreateEventController extends Controller
 {
-    public function index(Request $request){
-        $events = Event::orderBy('id','DESC')->paginate(5);
+    public function index()
+    {
+        $events = Event::orderBy('id', 'DESC')->paginate(5);
 
         $viewData = [
-            'events' => $events
+            'events' => $events,
         ];
 
-        return view('admin.event.index',$viewData);
+        return view('admin.event.index', $viewData);
     }
 
-    public function create(){
-        return view('admin.event.create',compact('event'));
+    public function create()
+    {
+        return view('admin.event.create', compact('event'));
     }
 
-    public function edit($id){
-
+    public function edit($id)
+    {
         $event = Event::find($id);
-        return view('admin.event.edit',compact('event'));
+
+        return view('admin.event.edit', compact('event'));
     }
 
-    public function update(AdminRequestCreateEvent $requestCreateEvent,$id){
-        $this->insertOrUpdate($requestCreateEvent,$id);
+    public function update(AdminRequestCreateEvent $requestCreateEvent, $id)
+    {
+        $this->insertOrUpdate($requestCreateEvent, $id);
 
-        return redirect()->route('admin.get.list.event')->with('succes','Cập nhập thành công !');
+        return redirect()->route('admin.get.list.event')->with('succes', 'Cập nhập thành công !');
     }
 
-    public function store(AdminRequestCreateEvent $requestCreateEvent){
-
+    public function store(AdminRequestCreateEvent $requestCreateEvent)
+    {
         $this->insertOrUpdate($requestCreateEvent);
 
-
-        return redirect()->route('admin.get.list.event')->with('noti','Thêm thành công');
+        return redirect()->route('admin.get.list.event')->with('noti', 'Thêm thành công');
     }
 
 
-
-    public function insertOrUpdate($requestCreateEvent,$id=''){
+    public function insertOrUpdate($requestCreateEvent, $id = '')
+    {
         $event = new Event();
 
-        if($id) $event = Event::find($id);
+        if ($id) {
 
-        $event->name = $requestCreateEvent->name;
-        $event->place = $requestCreateEvent->place;
-        $event->intro = $requestCreateEvent->intro;
-        $event->detail = $requestCreateEvent->detail;
-        $event->start_time = $requestCreateEvent->time_start;
-        $event->end_time = $requestCreateEvent->time_end;
+            $event = Event::find($id);
+        }
+
+        $event->name         = $requestCreateEvent->name;
+        $event->place        = $requestCreateEvent->place;
+        $event->intro        = $requestCreateEvent->intro;
+        $event->detail       = $requestCreateEvent->detail;
+        $event->start_time   = $requestCreateEvent->time_start;
+        $event->end_time     = $requestCreateEvent->time_end;
         $event->max_register = $requestCreateEvent->max_register;
-        $event->chairman = $requestCreateEvent->chairman;
+        $event->chairman     = $requestCreateEvent->chairman;
 
-        if($requestCreateEvent->hasFile('avatar'))
-        {
+        if ($requestCreateEvent->hasFile('avatar')) {
+
             $file = upload_image('avatar');
 
-            if(isset($file['name']))
-            {
-                $event->image = $file['name'];
+            if (isset($file['name'])) {
 
+                $event->image = $file['name'];
             }
         }
 
         $event->save();
     }
 
-    public function action(Request $request,$action,$id)
+    public function action($action, $id)
     {
         if ($action) {
             $event = Event::find($id);
+
             switch ($action) {
                 case 'delete':
+
                     $event->delete();
+
                     break;
             }
         }
         return redirect()->back();
     }
 
-    public function cancel_event(Request $request,$id)
+    public function cancel_event($id)
     {
-        $cancel = Event::find($id);
+        $cancel         = Event::find($id);
+
         $cancel->status = Event::Public;
+
         $cancel->save();
 
         return redirect()->back();

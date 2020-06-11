@@ -21,7 +21,7 @@
                     <div class="text-center">
                         <img src="{{asset($userProfile->avatar)}}" style="border-radius: 100px" width="150" height="150">
                     </div>
-                    <div class="container col-md-5">
+                    <div class="container text-center">
                         <label for="" class="text-center">{{__('Avatar')}} </label>
                     </div>
                 </div>

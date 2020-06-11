@@ -1,94 +1,75 @@
 <?php
-if(!function_exists('upload_image'))
+if (!function_exists('upload_image'))// trả về giá trị TRUE nếu hàm đã tồn tại và ngược lại FALSE nếu chưa tồn tại. -> neu ham ko ton tai moi thuc hien upload_image
 {
+
     function upload_image($file, $folder = '', array $extend = array())
     {
         $code = 1;
+        // lay duong dan anh
+        $baseFilename = public_path() . '/uploads/' . $_FILES[$file]['name'];
 
-        //Lấy đường dẫn ảnh
-        $baseFilename = public_path(). '/uploads/' .$_FILES[$file]['name'];
-
-        //Thông tin file
+        // thong tin file
         $info = new SplFileInfo($baseFilename);
+        // SplFileInfo la class cap cap thong tin cua file nhu ten, duoi mo rong ...
 
-        //Đuôi file
+        // duoi file
         $ext = strtolower($info->getExtension());
 
-        //Kiểm tra định dạng file
-        if(!$extend)
-        {
-            $extend = ['png','jpg','jpeg'];
+        // kiem tra dinh dang file
+        if (!$extend) {
+            $extend = ['png', 'jpg', 'jpeg'];
         }
 
-        if(!in_array($ext,$extend))
-        {
+        if (!in_array($ext, $extend)) {
             return $data['code'] = 0;
         }
 
-        //Tên file mới
-        $nameFile = trim(str_replace('.'.$ext,'',strtolower($info->getFilename())));
-        $filename = date('Y-m-d__').$nameFile.'.'.$ext;
+        // Tên file mới
+        $nameFile = trim(str_replace('.' . $ext, '', strtolower($info->getFilename())));
+        $filename = date('Y-m-d__') . str_slug($nameFile) . '.' . $ext;
 
-        //Thư mục gốc để upload
-        $path = public_path().'/uploads/'.date('Y/m/d');
-        if($folder)
-        {
-            $path = public_path().'/uploads/';
+        // thu muc goc de upload
+        $path = public_path() . '/uploads/' . date('Y/m/d/');
+
+        if ($folder) {
+            $path = public_path() . '/uploads/' . $folder . '/' . date('Y/m/d/');
         }
 
-        if(!\File::exists($path))
-        {
-            mkdir($path,0777,true);
+        if (!\File::exists($path)) {
+            mkdir($path, 0777, true);
         }
 
-        //di chuyển file vào thư mục uploads
-        move_uploaded_file($_FILES[$file]['tmp_name'], $path.$filename);
+        move_uploaded_file($_FILES[$file]['tmp_name'], $path . $filename);
 
         $data = [
-
-            'name'  => $filename,
-            'code'  => $code,
-            'path_img' => 'uploads/'.$filename
+            'name'     => $filename,
+            'code'     => $code,
+            'path_img' => 'uploads/' . $filename,
         ];
-
         return $data;
+
     }
 }
-
-if(!function_exists('pare_url_file'))
-{
-    function pare_url_file($image,$folder ='')
+if (!function_exists('pare_url_file')) {
+    function pare_url_file($image, $folder = '')
     {
-        if(!$image)
-        {
-            return'/images/no-image.jpg';
+        if (!$image) {
+            return '/images/no-image.jpg';
         }
 
         $explode = explode('__', $image);
-
-        if(isset($explode[0]))
-        {
-            $time = str_replace('_','/',$explode[0]);
-            return '/uploads/'.date('Y/m/d').$image;
-            // return '/uploads/'.$folder.'/' .date('Y/m/d', strtotime($time)).'/'.$image;
-        }
-    }
-
-    if (! function_exists('array_get')) {
-        /**
-         * Get an item from an array using "dot" notation.
-         *
-         * @param  \ArrayAccess|array  $array
-         * @param  string  $key
-         * @param  mixed   $default
-         * @return mixed
-         */
-        function array_get($array, $key, $default = null)
-        {
-            return Arr::get($array, $key, $default);
+        if (isset($explode[0])) {
+            $time = str_replace('_', '/', $explode[0]);
+            return '/uploads/' . $folder . '/' . date('Y/m/d', strtotime($time)) . '/' . $image;
         }
     }
 }
+
+if (!function_exists('str_slug')) {
+
+    function str_slug($title, $separator = '-')
+    {
+        return Str::slug($title, $separator);
+    }
+}
 ?>
-
-
