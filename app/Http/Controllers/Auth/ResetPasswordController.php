@@ -35,7 +35,7 @@ class ResetPasswordController extends Controller
         $status = $this->user->sendPasswordMail($email);
 
         if ($status) {
-            return redirect(route('login.form'))->with($this->message['send_mail_success']);
+            return redirect(route('login.form'))->with('messages',__('send_mail_success'));;
         }
 
         return back()->withErrors(__('Send mail failed. Please send mail again'))->withInput();
@@ -58,7 +58,7 @@ class ResetPasswordController extends Controller
 
         User::find($params['id'])->update($params);
 
-        return redirect(route('login.form'))->with($this->message['reset_password_success']);
+        return redirect(route('login.form'))->with('messages',__('reset_password_success'));;
 
     }
 }

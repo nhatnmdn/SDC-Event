@@ -51,7 +51,7 @@ class UserController extends Controller
             return back()->withErrors(['Current Password' => __('Wrong Current Password. Please try again')]);
         }
 
-        return redirect(route('profile'))->with($this->message['change_password_success']);
+        return redirect(route('profile'))->with('messages',__('change_password_success'));;
     }
 
     public function edit()
@@ -72,6 +72,6 @@ class UserController extends Controller
             return redirect(route('profile.update'))->withErrors('Update Failed. Please try again!');
         }
 
-        return redirect(route('profile'))->with($this->message['update_success']);
+        return redirect(route('profile'))->with('messages',__('update_success'));;
     }
 }

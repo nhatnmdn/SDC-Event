@@ -90,7 +90,7 @@
     {{--    </section>--}}
 </main>
 <!-- ======= Footer ======= -->
-<footer style="float: left; padding-top: 10px">
+<footer style="float: left">
     <div>
         <a class="add" href=""><i class="fas fa-map-marker-alt"></i>
             <span>41 Le Duan Str., Hai Chau District, Da Nang City</span>

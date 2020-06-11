@@ -61,5 +61,13 @@
     "You have canceled this event": "You have canceled this event!",
     "Confirm Password Not Matching Password": "Confirm Password Not Matching Password",
     "Confirm Password Matching Password": "Confirm Password Matching Password",
-    "Register success. Please login": "Register success. Please login"
+    "register_success": "Register success. Please login!",
+    "login_success": "Login success!",
+    "send_mail_success": "Send mail success. Please check your email!",
+    "reset_password_success": "Reset password success. Please login!",
+    "change_password_success": "Change password success!",
+    "Confirm Password Not Matching New Password": "Confirm Password Not Matching New Password",
+    "Confirm Password Matching New Password": "Confirm Password Matching New Password",
+    "update_success": "Update Information success!",
+    "The avatar must be an image": "The avatar must be an image"
 }

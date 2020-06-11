@@ -31,7 +31,7 @@ class RegisterController extends Controller
         $status = $this->user->store($params);
 
         if ($status) {
-            return redirect(route('login.form'))->with($this->message['register_success']);
+            return redirect(route('login.form'))->with('messages',__('register_success'));
         }
 
         return back()->withErrors(__('Register Failed. Please check again'));

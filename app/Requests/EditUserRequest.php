@@ -29,9 +29,24 @@ class EditUserRequest extends FormRequest
         return [
             'name'    => 'required',
             'email'   => ['required', Rule::unique('users')->ignore(Auth::id()), 'email'],
-            'phone'   => 'required|digits:10',
+            'phone'   => 'required|digits:10|numeric',
             'address' => 'required',
             'avatar'  => 'image',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required'    => __('The name field is required'),
+            'email.required'   => __('The email field is required'),
+            'email.email'      => __('The email must be a valid email address'),
+            'email.unique'     => __('The email has already been taken'),
+            'address.required' => __('The address field is required'),
+            'phone.required'   => __('The phone field is required'),
+            'phone.digits'     => __('The phone must be 10 digits'),
+            'phone.numeric'    => __('The phone must be a number'),
+            'avatar.image'     => __('The avatar must be an image'),
         ];
     }
 }

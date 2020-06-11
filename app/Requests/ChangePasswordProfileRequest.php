@@ -33,11 +33,11 @@ class ChangePasswordProfileRequest extends FormRequest
     public function messages()
     {
         return [
-            'current_password.required'  => __('The current password field is required'),
-            'new_password.required'  => __('The new password field is required'),
-            'new_password.different'  => __('The new password and current password must be different'),
-            'password_confirmation.required'  => __('The password confirmation field is required'),
-            'password_confirmation.same'  => __('The password confirmation and new password must match'),
+            'current_password.required'      => __('The current password field is required'),
+            'new_password.required'          => __('The new password field is required'),
+            'new_password.different'         => __('The new password and current password must be different'),
+            'password_confirmation.required' => __('The password confirmation field is required'),
+            'password_confirmation.same'     => __('The password confirmation and new password must match'),
         ];
     }
 }

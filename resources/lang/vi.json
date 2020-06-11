@@ -61,5 +61,13 @@
     "You have canceled this event": "Bạn đã hủy sự kiện!",
     "Confirm Password Not Matching Password": "Mật khẩu xác nhận không khớp với mật khẩu",
     "Confirm Password Matching Password": "Mật khẩu xác nhận khớp với mật khẩu",
-    "Register success. Please login": "Đăng ký thành công. Xin vui lòng đăng nhập"
+    "register_success": "Đăng ký thành công. Xin vui lòng đăng nhập!",
+    "login_success": "Đăng nhập thành công!",
+    "send_mail_success": "Gửi thư thành công. Xin vui lòng kiểm tra hộp thư của bạn!",
+    "reset_password_success": "Đặt lại mật khẩu thành công. Xin vui lòng đăng nhập!",
+    "change_password_success": "Thay đổi mật khẩu thành công!",
+    "Confirm Password Not Matching New Password": "Mật khẩu xác nhận không khớp với mật khẩu mới",
+    "Confirm Password Matching New Password": "Mật khẩu xác nhận khớp với mật khẩu mới",
+    "update_success": "Cập nhật thông tin thành công!",
+    "The avatar must be an image": "Hình đại diện phải là một hình ảnh"
 }

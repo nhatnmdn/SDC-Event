@@ -90,9 +90,9 @@
     <!-- MAIN -->
     <div class="main">
         <!-- MAIN CONTENT -->
-        @if(Session::has('login'))
+        @if(Session::has('messages'))
             <div class="alert alert-success" role="alert">
-                {{Session::get('login')}}
+                {{Session::get('messages')}}
             </div>
     @endif
     @yield('content')
