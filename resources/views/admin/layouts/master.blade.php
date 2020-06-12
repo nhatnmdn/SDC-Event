@@ -80,7 +80,6 @@
                     <li><a href="{{route('admin.get.list.event')}}" class="{{ \Request::route()->getname() == 'admin.get.list.event' ? 'active' : '' }}"><i class="lnr lnr-file-empty"></i> <span>Quản lý sự kiện</span></a></li>
                     <li><a href="{{route('admin.get.list.registration')}}"  class="{{ \Request::route()->getname() == 'admin.get.list.registration' ? 'active' : '' }}"><i class="lnr lnr-dice"></i> <span>Danh sách đăng ký</span></a></li>
                     <li><a href="{{route('admin.get.list.user')}}"  class="{{ \Request::route()->getname() == 'admin.get.list.user' ? 'active' : '' }}"><i class="lnr lnr-dice"></i> <span>Quản lý người dùng</span></a></li>
-                    <li><a href="{{route('admin.get.list.personel')}}"  class="{{ \Request::route()->getname() == 'admin.get.list.personel' ? 'active' : '' }}"><i class="lnr lnr-dice"></i> <span>Nhân viên</span></a></li>
                     <li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>Cài đặt</span></a></li>
                 </ul>
             </nav>

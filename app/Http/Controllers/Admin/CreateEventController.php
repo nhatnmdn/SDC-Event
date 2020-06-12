@@ -10,7 +10,9 @@ use Illuminate\Http\Request;
 class CreateEventController extends Controller
 {
     public function index(Request $request){
-        $events = Event::orderBy('id','DESC')->paginate(5);
+        $events = Event::whereRaw(1);
+
+        $events = $events->paginate(5);
 
         $viewData = [
             'events' => $events
@@ -29,6 +31,12 @@ class CreateEventController extends Controller
         return view('admin.event.edit',compact('event'));
     }
 
+    public function viewEvent(Request $request,$id){
+        $detail = Event::find($id);
+
+        return view('admin.event.detail_event',compact('detail'));
+    }
+
     public function update(AdminRequestCreateEvent $requestCreateEvent,$id){
         $this->insertOrUpdate($requestCreateEvent,$id);
 
@@ -42,7 +50,6 @@ class CreateEventController extends Controller
 
         return redirect()->route('admin.get.list.event')->with('noti','Thêm thành công');
     }
-
 
 
     public function insertOrUpdate($requestCreateEvent,$id=''){

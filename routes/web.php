@@ -56,6 +56,7 @@ Route::group(['prefix'=>'admin', 'middleware' => 'admin.auth'],function (){
     Route::post('/event/create','Admin\CreateEventController@store');
     Route::get('/event/edit/{id}','Admin\CreateEventController@edit')->name('admin.get.edit.event');
     Route::post('/event/edit/{id}','Admin\CreateEventController@update');
+    Route::get('/event/detail/{id}','Admin\CreateEventController@viewEvent')->name('admin.view.event');
     Route::get('/event/{action}/{id}','Admin\CreateEventController@action')->name('admin.get.action.event');
     Route::put('/event/cancel/{id}','Admin\CreateEventController@cancel_event')->name('cancel_event');
 
@@ -65,10 +66,12 @@ Route::group(['prefix'=>'admin', 'middleware' => 'admin.auth'],function (){
 
 
     Route::get('/user','Admin\ManagerUserController@index')->name('admin.get.list.user');
+    Route::get('/user/create','Admin\ManagerUserController@create')->name('admin.get.create.user');
+    Route::post('user/create', 'Admin\ManagerUserController@store')->name('admin.register');
+    Route::get('/user/detail/{id}','Admin\ManagerUserController@detail')->name('admin.detail');
+    Route::get('/user/{action}/{id}','Admin\ManagerUserController@action')->name('admin.get.action.user');
 
-    Route::get('/personel','Admin\ManagerPersonelController@index')->name('admin.get.list.personel');
-    Route::get('/personel/create','Admin\ManagerPersonelController@create')->name('admin.get.create.personel');
-    Route::get('/personel/edit','Admin\ManagerPersonelController@edit')->name('admin.get.edit.personel');
+
 
 });
 

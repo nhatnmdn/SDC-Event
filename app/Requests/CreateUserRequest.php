@@ -30,6 +30,7 @@ class CreateUserRequest extends FormRequest
             'password_confirmation' => 'required|same:password',
             'address'               => 'required',
             'phone'                 => 'required|digits:10|numeric',
+
         ];
     }
 
@@ -47,6 +48,7 @@ class CreateUserRequest extends FormRequest
             'phone.required' => __('The phone field is required'),
             'phone.digits' => __('The phone must be 10 digits'),
             'phone.numeric' => __('The phone must be a number'),
+
         ];
     }
 }

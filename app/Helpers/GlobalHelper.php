@@ -17,9 +17,9 @@ class GlobalHelper
 
     public static function checkAdminRole()
     {
-        $user = Auth::user();
+        $users = Auth::user();
 
-        return $user->role_id === Role::$role['Admin'];
+        return $users->role_id === Role::$role['Admin'];
     }
 
     public static $message = [

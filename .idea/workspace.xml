@@ -20,66 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cce8dcc-b514-43d7-9a22-c4a88e1feb9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LanguageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Language.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/RegistrationEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatar/1/8625308f1624185a1ecc5e041e929d49583feed38c55e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatar/1/ngay-hoi-bia-huda-tai-sun-world-danang-wonders.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__images.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__yeuthich2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__yeuthich5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/052020-06-05__yeuthich6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/082020-06-08__countdown-party-2020-da-nang.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/082020-06-08__gea-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/082020-06-08__honda-youth-fest(1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/082020-06-08__ngay-hoi-bia-huda-tai-sun-world-danang-wonders.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/092020-06-09__countdown-party-2020-da-nang.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/092020-06-09__gea-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/2020/06/092020-06-09__ngay-hoi-bia-huda-tai-sun-world-danang-wonders.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/vi.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SDC-EVENT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SDC-EVENT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/event/detail_event.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/modal/modal-detail-user.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user/detail_user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Helpers/GlobalHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/GlobalHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/function.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminLoginController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CreateEventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CreateEventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ListRegisterEventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ListRegisterEventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/CheckinController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/CheckinController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/EventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UploadImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UploadImageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Event/RegisterEventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Event/RegisterEventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/RegisterEvent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ManagerPersonelController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ManagerUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ManagerUserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Requests/ChangePasswordProfileRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/ChangePasswordProfileRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Requests/CreateUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/CreateUserRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Requests/ForgotPasswordRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/ForgotPasswordRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Requests/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/LoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Requests/ResetPasswordRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Requests/ResetPasswordRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/EventFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/EventFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_05_041324_create_register_events_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_05_041324_create_registration_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/event/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/event/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/modal/modal-add-personel.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/modal/modal-del-event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/modal/modal-del-event.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/master/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/forgot.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/forgot.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/auth/reset_password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/auth/reset_password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/detail_event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/detail_event.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/modal/modal-del-personel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/modal/modal-del-user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/personel/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/personel/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/personel/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/personel/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/profile_edit_password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile_edit_password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,9 +52,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -244,7 +205,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/user" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -255,11 +216,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Popper\Desktop\fix\SDC-Event\resources\views\admin\user" />
+      <recent name="C:\Users\Popper\Desktop\fix\SDC-Event\resources\views\admin\event" />
       <recent name="C:\Users\Popper\Desktop\New folder (3)\SDC-Event\public\user\images" />
       <recent name="C:\Users\Popper\Desktop\New folder (3)\SDC-Event\resources\views\admin" />
       <recent name="C:\Users\Popper\Desktop\New folder (3)\SDC-Event\app\Http\Requests" />
-      <recent name="C:\Users\Popper\Desktop\New folder (3)\SDC-Event\app\Http\Controllers" />
-      <recent name="C:\Users\Popper\Desktop\New folder (3)\SDC-Event\app\Http\Controllers\Admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -299,6 +260,12 @@
       <workItem from="1591664812356" duration="358000" />
       <workItem from="1591666336228" duration="23805000" />
       <workItem from="1591751618126" duration="301000" />
+      <workItem from="1591840083386" duration="16000" />
+      <workItem from="1591840106319" duration="4584000" />
+      <workItem from="1591844733643" duration="7206000" />
+      <workItem from="1591857424806" duration="14520000" />
+      <workItem from="1591887451378" duration="8104000" />
+      <workItem from="1591925493041" duration="2668000" />
     </task>
     <servers />
   </component>
@@ -310,23 +277,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="70" y="27" width="476" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590999575925">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="70" y="27" width="476" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/70.27.1296.741@70.27.1296.741" timestamp="1590999575925" />
-    <state x="454" y="126" width="424" height="491" key="FileChooserDialogImpl" timestamp="1591666660135">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1591893329021">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="454" y="126" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591666660135" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1591893329021" />
+    <state x="454" y="126" width="424" height="491" key="FileChooserDialogImpl" timestamp="1591840101334">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="454" y="126" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591840101334" />
     <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1590640903264" />
     <state width="1250" height="164" key="GridCell.Tab.0.bottom" timestamp="1590640052339">
       <screen x="70" y="27" width="1296" height="741" />
@@ -360,13 +330,24 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="390" y="68" width="585" height="592" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1591666707305" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1591670330534">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1591927100524">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1591670330534" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1591927100524" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591697120635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1591697120635" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/User/UserController.php</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

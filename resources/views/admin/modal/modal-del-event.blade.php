@@ -15,7 +15,7 @@
             <div class="modal-footer">
                 <a type="button" class="btn btn-primary" data-dismiss="modal">Đóng</a>
                 @if(isset($item))
-                <a href="{{route('admin.get.action.event',['delete',$item->id])}}" class="btn btn-danger">Xóa</a>
+                        <a href="{{route('admin.get.action.event',['delete',$item->id])}}" class="btn btn-danger">Xóa</a>
                 @endif
             </div>
         </div>
