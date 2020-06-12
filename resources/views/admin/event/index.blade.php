@@ -13,6 +13,7 @@
                     {{Session::get('noti')}}
                 </div>
             @endif
+
             <div class="row">
                 <div class="col-md-12">
                     <!-- TABLE STRIPED -->
@@ -28,30 +29,33 @@
                                     <th>#</th>
                                     <th>Tên sự kiện</th>
                                     <th>Hình ảnh</th>
+                                    <th>Địa điểm</th>
                                     <th>Bắt đầu</th>
                                     <th>Kết thúc</th>
                                     <th style="width:200px">Mô tả</th>
                                     <th>Hủy sự kiện</th>
                                     <th>Trạng thái</th>
-                                    <th>Thao tác</th>
+                                    <th style="width: 15%">Thao tác</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @if(isset($events))
-                                    @foreach($events as $item)
+                                    @foreach($events as $key => $item)
                                         <tr>
-                                            <td>{{$item->id}}</td>
+                                            <td>{{ $key+1 }}</td>
                                             <td style="text-align: left;width: 200px">{{$item->name}}</td>
                                             <td>
                                                 <img class="reponsive" style="with:30px; height:30px"
                                                      src="{{pare_url_file($item->image)}}" value="0">
                                             </td>
-
+                                            <td>{{$item->place}}</td>
                                             <td>{{$item->start_time}}</td>
                                             <td>{{$item->end_time}}</td>
                                             <td>{{$item->intro}}</td>
+
                                             @if($item->status == 0)
-                                                <td><a href="{{ route('cancel_event',$item->id) }}" class="label label-danger">Hủy</a></td>
+                                                <td><a href="{{ route('cancel_event',$item->id) }}"
+                                                       class="label label-danger">Hủy</a></td>
                                             @else
                                                 <td><a class="label label-danger">Đã hủy</a></td>
                                             @endif
@@ -61,7 +65,7 @@
                                                 $start = new DateTime("$item->start_time");
                                                 $end = new DateTime("$item->end_time");
                                                 if ($now > $end) {
-                                                    echo "<span class='label label-danger'>Đã diễn ra</span>";
+                                                    echo "<span class='label label-default'>Đã diễn ra</span>";
                                                 } else
                                                     if ($now < $start) {
                                                         echo "<span class='label label-info'>Sắp diễn ra</span>";
@@ -75,6 +79,10 @@
                                                 <a style="padding: 5px 10px; border: 1px solid #999; font-size:12px"
                                                    href="{{route('admin.get.edit.event',$item->id)}}"><i
                                                         class="fas fa-edit"></i></a>
+                                                <a href="{{route('admin.view.event',$item->id)}}"
+                                                   data-toggle="modal"
+                                                   style="padding: 5px 10px; border: 1px solid #999; font-size:12px"><i
+                                                        class="fas fa-info-circle js_view_item"></i></a>
                                                 <a href=""
                                                    data-toggle="modal" data-target="#myModal"
                                                    style="padding: 5px 10px; border: 1px solid #999; font-size:12px"><i
@@ -96,4 +104,28 @@
 
     @include("admin.modal.modal-del-event")
 
-@endsection
+    <div id="myOrder" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Chi tiết sự kiện <b class="transaction_id"></b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="md_content">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection()
+
+@section('script')
+@stop
+
+
