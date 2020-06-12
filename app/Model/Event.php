@@ -28,7 +28,6 @@ class Event extends Model
 
     public function getEvents($limits, $search, $searchKey)
     {
-
         $query = Event::query();
 
         if (!empty($searchKey) && !empty($search)) {

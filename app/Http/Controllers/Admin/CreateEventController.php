@@ -40,6 +40,12 @@ class CreateEventController extends Controller
         return view('admin.event.edit', compact('event'));
     }
 
+    public function viewEvent(Request $request,$id){
+        $detail = Event::find($id);
+
+        return view('admin.event.detail_event',compact('detail'));
+    }
+
     public function update(AdminRequestCreateEvent $requestCreateEvent, $id)
     {
         $this->insertOrUpdate($requestCreateEvent, $id);

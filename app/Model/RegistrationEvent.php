@@ -4,7 +4,6 @@ namespace App\Model;
 
 use App\Event;
 use App\Filters\RegistrationEventFilter;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class RegistrationEvent extends Model

@@ -1,4 +1,3 @@
-
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-confirm">
         <div class="modal-content">
@@ -10,11 +9,15 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
-                <p>Bạn có thực sự muốn xóa nhân viên này?</p>
+                <p>Bạn có thực sự muốn xóa người dùng này?</p>
             </div>
             <div class="modal-footer">
                 <a type="button" class="btn btn-primary" data-dismiss="modal">Đóng</a>
-                <a href="" class="btn btn-danger">Xóa</a>
+                @if(isset($item))
+                    @if(isset($item))
+                        <a href="{{route('admin.get.action.user',['delete',$item->id])}}" class="btn btn-danger">Xóa</a>
+                    @endif
+                @endif
             </div>
         </div>
     </div>
@@ -29,6 +32,7 @@
             color: #636363;
             width: 400px;
         }
+
         .modal-confirm .modal-content {
             padding: 20px;
             border-radius: 5px;
@@ -36,23 +40,28 @@
             text-align: center;
             font-size: 14px;
         }
+
         .modal-confirm .modal-header {
             border-bottom: none;
             position: relative;
         }
+
         .modal-confirm h4 {
             text-align: center;
             font-size: 26px;
             margin: 30px 0 -10px;
         }
+
         .modal-confirm .close {
             position: absolute;
             top: -5px;
             right: -2px;
         }
+
         .modal-confirm .modal-body {
             color: #999;
         }
+
         .modal-confirm .modal-footer {
             border: none;
             text-align: center;
@@ -60,10 +69,12 @@
             font-size: 13px;
             padding: 10px 15px 25px;
         }
+
         .modal-confirm .modal-footer a {
             color: #FFF;
-            padding-top:10px;
+            padding-top: 10px;
         }
+
         .modal-confirm .icon-box {
             width: 80px;
             height: 80px;
@@ -73,12 +84,14 @@
             text-align: center;
             border: 3px solid #f15e5e;
         }
+
         .modal-confirm .icon-box i {
             color: #f15e5e;
             font-size: 46px;
             display: inline-block;
             margin-top: 13px;
         }
+
         .modal-confirm .btn {
             color: #fff;
             border-radius: 4px;
@@ -93,22 +106,28 @@
             margin: 0 5px;
             outline: none !important;
         }
+
         .modal-confirm .btn-info {
             background: #c1c1c1;
         }
+
         .modal-confirm .btn-info:hover, .modal-confirm .btn-info:focus {
             background: #a8a8a8;
         }
+
         .modal-confirm .btn-danger {
             background: #f15e5e;
         }
+
         .modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
             background: #ee3535;
         }
+
         .trigger-btn {
             display: inline-block;
             margin: 100px auto;
         }
     </style>
 </head>
+
 

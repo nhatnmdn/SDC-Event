@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Event;
 use App\Http\Controllers\Controller;
 use App\Model\RegistrationEvent;
 use Illuminate\Http\Request;
@@ -17,13 +18,14 @@ class ListRegisterEventController extends Controller
 
     public function index(Request $request)
     {
-        $limits    = $request->get('limits', 10);
-        $search    = $request->get('search', '');
-        $searchKey = $request->get('searchBy', '');
+        $limits     = $request->get('limits', 10);
+        $search     = $request->get('search', '');
+        $searchKey  = $request->get('searchBy', '');
+        $listEvents = Event::all();
 
         $lists = $this->registrationEvent->getRegistrationEvents($limits, $search, $searchKey);
 
-        return view('admin.registration.index', compact('lists'));
+        return view('admin.registration.index', compact('lists', 'listEvents'));
     }
 
     public function showDetailRegistration($id)
