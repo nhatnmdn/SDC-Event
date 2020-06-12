@@ -15,10 +15,31 @@
             <div class="row">
                 <div class="col-md-12">
                     <!-- TABLE STRIPED -->
-                    <div class="panel-heading">
+                    <div class="panel-heading col-md-12" style="float: left">
                         <h3 class="panel-title">DANH SÁCH ĐĂNG KÍ</h3>
+                        <div class="card-title col-md-12" style="display: inline-block">
+                            <form action="{{route('admin.get.list.registration')}}" method="get">
+                                <div class="input-group col-md-3" style="float: left">
+                                    <input type="text" class="form-control" name="search" value="{{request()->query('search')}}">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-info" style="float: right" type="submit"><i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-3" style="float: left">
+                                    <div class="col-5">
+                                        <input type="radio" name="searchBy" id="event" value="event" {{request()->query('searchBy') == 'event' ? 'checked' : ''}}>
+                                        <label for="event">Tên sự kiện</label>
+                                    </div>
+                                    <div class="col-5">
+                                        <input type="radio" name="searchBy" id="name" value="name" {{request()->query('searchBy') == 'name' ? 'checked' : ''}}>
+                                        <label for="name">Tên người đăng ký</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="panel" style="margin-top:30px">
+                    <div class="panel col-md-12" style="margin-top:30px; float: left">
                         <div class="panel-body">
                             <table class="table table-striped">
                                 <thead>

@@ -4,14 +4,24 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Model\RegistrationEvent;
+use Illuminate\Http\Request;
 
 class ListRegisterEventController extends Controller
 {
-    public function index()
-    {
-        $query = RegistrationEvent::query();
+    protected $registrationEvent;
 
-        $lists = $query->with('users', 'events')->orderByDesc('created_at')->paginate( 5);
+    public function __construct()
+    {
+        $this->registrationEvent = app(RegistrationEvent::class);
+    }
+
+    public function index(Request $request)
+    {
+        $limits    = $request->get('limits', 10);
+        $search    = $request->get('search', '');
+        $searchKey = $request->get('searchBy', '');
+
+        $lists = $this->registrationEvent->getRegistrationEvents($limits, $search, $searchKey);
 
         return view('admin.registration.index', compact('lists'));
     }
