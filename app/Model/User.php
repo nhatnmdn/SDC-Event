@@ -31,6 +31,10 @@ class User extends Authenticatable
         return $this->hasMany(RegistrationEvent::class);
     }
 
+    public function role(){
+        return $this->belongsTo(Role::class);
+    }
+
     public function login($params)
     {
         if (Auth::attempt($params)) {

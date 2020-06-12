@@ -7,16 +7,13 @@
                 <ol class="breadcrumb" style="margin-top: -57px;background: #bfb6b64a">
                     <li><a href="{{ route('admin.home') }}">Trang chủ</a>
                     </li>
-                    <li><a href="{{ route('admin.get.list.event') }}">Nhân viên</a>
+                    <li><a href="{{route('admin.get.list.user')}}">Nhân viên</a>
                     </li>
                     <li class="active">Thêm mới</li>
                 </ol>
             </div>
             <div>
-
-
-                @include("admin.personel.form")
-
+                @include("admin.user.form")
             </div>
         </div>
     </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Event;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminRequestCreateEvent;
+use Illuminate\Http\Request;
 
 class CreateEventController extends Controller
 {
@@ -29,6 +30,12 @@ class CreateEventController extends Controller
         $event = Event::find($id);
 
         return view('admin.event.edit', compact('event'));
+    }
+
+    public function viewEvent(Request $request,$id){
+        $detail = Event::find($id);
+
+        return view('admin.event.detail_event',compact('detail'));
     }
 
     public function update(AdminRequestCreateEvent $requestCreateEvent, $id)
