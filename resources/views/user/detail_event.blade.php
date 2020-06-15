@@ -31,11 +31,7 @@
                         <p><strong>Kết thúc</strong>: {{$detail->end_time}}</p>
                         <p><strong>Địa điểm</strong>: {{$detail->place}}</p>
                         <div>
-{{--                            @if(\Auth::user())--}}
-{{--                                {{ $list = DB::table('registration')->where('user_id',Auth::user()->id)->where('event_id',$detail->id)->count() }}--}}
-{{--                            @endif--}}
                             @if(isset($list))
-{{--                                {{dd($list)}}--}}
                                 @if($list == 0)
                                     <button type="submit" class="btn btn-primary" style="width: max-content;height: 35px">{{ __('Register') }}</button>
                                 @else
