@@ -24,10 +24,16 @@
       <change afterPath="$PROJECT_DIR$/resources/views/admin/user/detail_user.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/admin/user/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filters/EventFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filters/EventFilter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filters/RegistrationEventFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filters/RegistrationEventFilter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CreateEventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CreateEventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ListRegisterEventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ListRegisterEventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ManagerPersonelController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ManagerUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ManagerUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/RegistrationEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/RegistrationEvent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/event/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/event/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" afterDir="false" />
@@ -37,6 +43,7 @@
       <change beforePath="$PROJECT_DIR$/resources/views/admin/personel/edit.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/personel/form.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/personel/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/registration/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/registration/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -47,7 +54,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -200,7 +209,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/event" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Filters" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -211,11 +220,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Filters" />
       <recent name="C:\Users\Popper\Desktop\clone_sdc\SDC-Event\resources\views\admin\event" />
       <recent name="C:\Users\Popper\Desktop\clone_sdc\SDC-Event\resources\views\admin\modal" />
       <recent name="C:\Users\Popper\Desktop\clone_sdc\SDC-Event\resources\views\admin\user" />
       <recent name="C:\Users\Popper\Desktop\clone_sdc\SDC-Event\app\Http\Controllers\Admin" />
-      <recent name="C:\Users\Popper\Desktop\New folder (3)\SDC-Event\public\user\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -267,12 +276,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="70" y="27" width="476" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590999575925">

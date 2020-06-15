@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateUserRequest;
 use App\Model\Role;
 use App\Model\User;
-use Auth;
 use App\Helpers\GlobalHelper;
 use Illuminate\Http\Request;
 
@@ -14,32 +13,36 @@ class ManagerUserController extends Controller
 {
     protected $message;
     protected $user;
+    protected $userFilter;
 
     public function __construct()
     {
-        $this->message = GlobalHelper::$message;
-        $this->user   = new User();
+        $this->message    = GlobalHelper::$message;
+        $this->user       = new User();
+        $this->userFilter = app(User::class);
     }
 
-    public function index(){
+    public function index(Request $request)
+    {
+        $limits    = $request->get('limits', 10);
+        $search    = $request->get('search', '');
+        $searchKey = $request->get('searchBy', '');
 
-        $query = User::query();
-        $users = $query->with('role')->orderByDesc('created_at')->paginate( 5);
+        $users = $this->userFilter->getUsers($limits, $search, $searchKey);
 
-        $viewData = [
-            'users' => $users
-        ];
-        return view('admin.user.index',$viewData);
+        return view('admin.user.index', compact("users"));
     }
 
-    public function create(){
+    public function create()
+    {
         $roles = Role::all();
-        return view('admin.user.create',compact('roles'));
+        return view('admin.user.create', compact('roles'));
     }
 
-    public function detail(Request $request,$id){
+    public function detail(Request $request, $id)
+    {
         $users = User::find($id);
-        return view('admin.user.detail_user',compact('users'));
+        return view('admin.user.detail_user', compact('users'));
     }
 
     public function store(CreateUserRequest $request)
@@ -49,14 +52,14 @@ class ManagerUserController extends Controller
         $status = $this->user->store($params);
 
         if ($status) {
-            return redirect(route('admin.get.list.user'))->with('success','Thêm mời người dùng thành công !');
+            return redirect(route('admin.get.list.user'))->with('success', 'Thêm mời người dùng thành công !');
         }
 
         return back()->withErrors(__('Register Failed. Please check again'));
 
     }
 
-    public function action(Request $request,$action,$id)
+    public function action(Request $request, $action, $id)
     {
         if ($action) {
             $user = User::find($id);

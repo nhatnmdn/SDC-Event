@@ -9,15 +9,23 @@ use Illuminate\Http\Request;
 
 class CreateEventController extends Controller
 {
-    public function index()
+    protected $event;
+
+    public function __construct()
     {
-        $events = Event::orderBy('id', 'DESC')->paginate(5);
+        $this->event = app(Event::class);
+    }
 
-        $viewData = [
-            'events' => $events,
-        ];
+    public function index(Request $request)
+    {
+        $limits    = $request->get('limits', 10);
+        $search    = $request->get('search', '');
+        $searchKey = $request->get('searchBy', '');
+        $listEvent = Event::all();
 
-        return view('admin.event.index', $viewData);
+        $events = $this->event->getEvents($limits, $search, $searchKey);
+
+        return view('admin.event.index', compact('events', 'listEvent'));
     }
 
     public function create()
@@ -52,13 +60,11 @@ class CreateEventController extends Controller
         return redirect()->route('admin.get.list.event')->with('noti', 'Thêm thành công');
     }
 
-
     public function insertOrUpdate($requestCreateEvent, $id = '')
     {
         $event = new Event();
 
         if ($id) {
-
             $event = Event::find($id);
         }
 
@@ -72,11 +78,9 @@ class CreateEventController extends Controller
         $event->chairman     = $requestCreateEvent->chairman;
 
         if ($requestCreateEvent->hasFile('avatar')) {
-
             $file = upload_image('avatar');
 
             if (isset($file['name'])) {
-
                 $event->image = $file['name'];
             }
         }
@@ -91,18 +95,18 @@ class CreateEventController extends Controller
 
             switch ($action) {
                 case 'delete':
-
                     $event->delete();
 
                     break;
             }
         }
+
         return redirect()->back();
     }
 
     public function cancel_event($id)
     {
-        $cancel         = Event::find($id);
+        $cancel = Event::find($id);
 
         $cancel->status = Event::Public;
 

@@ -2,18 +2,30 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Event;
 use App\Http\Controllers\Controller;
 use App\Model\RegistrationEvent;
+use Illuminate\Http\Request;
 
 class ListRegisterEventController extends Controller
 {
-    public function index()
+    protected $registrationEvent;
+
+    public function __construct()
     {
-        $query = RegistrationEvent::query();
+        $this->registrationEvent = app(RegistrationEvent::class);
+    }
 
-        $lists = $query->with('users', 'events')->orderByDesc('created_at')->paginate( 5);
+    public function index(Request $request)
+    {
+        $limits     = $request->get('limits', 10);
+        $search     = $request->get('search', '');
+        $searchKey  = $request->get('searchBy', '');
+        $listEvents = Event::all();
 
-        return view('admin.registration.index', compact('lists'));
+        $lists = $this->registrationEvent->getRegistrationEvents($limits, $search, $searchKey);
+
+        return view('admin.registration.index', compact('lists', 'listEvents'));
     }
 
     public function showDetailRegistration($id)

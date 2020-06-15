@@ -31,3 +31,15 @@ input[type="file"] {
     color: red;
     margin-top: 5px;
 }
+
+.input-group-append {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.input-group-prepend .btn,
+.input-group-append .btn {
+    position: relative;
+    z-index: 2;
+}

@@ -11,7 +11,26 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel-heading">
-                        <h3 class="panel-title">NGƯỜI DÙNG<a style="color:white" class="btn btn-success pull-right" href="{{route('admin.get.create.user')}}">Thêm</a></h3>
+                        <h3 class="panel-title">NGƯỜI DÙNG<a style="color:white; float: left" class="btn btn-success pull-right" href="{{route('admin.get.create.user')}}">Thêm</a></h3>
+                        <div class="row">
+                        <div class="card-title col-md-12">
+                            <form action="{{route('admin.get.list.user')}}" method="get">
+                                <div class="input-group col-md-3" style="float: left">
+                                    <input type="text" class="form-control" name="search" value="{{request()->query('search')}}">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-info" style="float: right" type="submit"><i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-3" style="float: left">
+                                    <div class="col-5">
+                                        <input type="radio" hidden checked name="searchBy" id="name" value="name" {{request()->query('searchBy') == 'name'}}>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        </div>
                     </div>
                     <div class="panel" style="margin-top:30px">
                         <div class="panel-body">
@@ -28,9 +47,9 @@
                                 </thead>
                                 <tbody>
                                 @if(isset($users))
-                                    @foreach($users as $item)
+                                    @foreach($users as $key => $item)
                                 <tr>
-                                    <td>{{$item->id}}</td>
+                                    <td>{{++$key}}</td>
                                     <td>{{$item->name}}</td>
                                     <td> {{$item->email}} </td>
                                     <td>{{$item->role->name}}</td>
