@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Event;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminRequestCreateEvent;
+use App\Model\RegistrationEvent;
 use Illuminate\Http\Request;
 
 class CreateEventController extends Controller
@@ -40,10 +41,18 @@ class CreateEventController extends Controller
         return view('admin.event.edit', compact('event'));
     }
 
-    public function viewEvent(Request $request,$id){
+    public function viewEvent($id)
+    {
         $detail = Event::find($id);
 
-        return view('admin.event.detail_event',compact('detail'));
+        return view('admin.event.detail_event', compact('detail'));
+    }
+
+    public function detailRegistrationEvent($id)
+    {
+        $detailRegistrations = RegistrationEvent::with('users', 'events')->where('event_id', $id)->orderByDesc('created_at')->paginate(10);
+
+        return view('admin.event.detail_registration', compact('detailRegistrations'));
     }
 
     public function update(AdminRequestCreateEvent $requestCreateEvent, $id)
@@ -104,15 +113,20 @@ class CreateEventController extends Controller
         return redirect()->back();
     }
 
-    public function cancel_event($id)
+    public function cancel_event(Request $request)
     {
-        $cancel = Event::find($id);
+        $params           = $request->except('__token');
+        $params['status'] = Event::Public;
 
-        $cancel->status = Event::Public;
+        $event = Event::where('id', $params['id'])->first();
 
-        $cancel->save();
+        if ($event->status == 0) {
+            $event->status = 1;
 
-        return redirect()->back();
+            $event->save();
+        }
+
+        return redirect(route('admin.get.list.event'));
     }
 
 }

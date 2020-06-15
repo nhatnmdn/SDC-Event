@@ -69,5 +69,6 @@
     "Confirm Password Not Matching New Password": "Mật khẩu xác nhận không khớp với mật khẩu mới",
     "Confirm Password Matching New Password": "Mật khẩu xác nhận khớp với mật khẩu mới",
     "update_success": "Cập nhật thông tin thành công!",
-    "The avatar must be an image": "Hình đại diện phải là một hình ảnh"
+    "The avatar must be an image": "Hình đại diện phải là một hình ảnh",
+    "Your subscription has expired": "Đăng ký của bạn đã hết hạn"
 }

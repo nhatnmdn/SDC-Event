@@ -47,6 +47,7 @@ class RegisterEventController extends Controller
         ])->count();
         $user          = $request->user();
         $register      = new RegistrationEvent();
+        $count         = RegistrationEvent::where(['event_id' => $id, 'user_id' => $user->id, 'status' => '1'])->count();
 
         if ($user) {
             $list = RegistrationEvent::where([
@@ -66,10 +67,14 @@ class RegisterEventController extends Controller
             } else {
 
                 if ($event->max_register > $list_register) {
+                    if ($count < 3) {
 
-                    $register->save();
+                        $register->save();
 
-                    return redirect()->back()->with('success', __('Register success'));
+                        return redirect()->back()->with('success', __('Register success'));
+                    }
+
+                    return redirect()->back()->with('danger', __('Your subscription has expired'));
                 }
 
                 return redirect()->back()->with('danger', __('The number of subscribers is full'));
@@ -95,6 +100,6 @@ class RegisterEventController extends Controller
 
         $cancel->save();
 
-        return redirect()->back()->with('success', __('You have canceled this event'));
+        return redirect()->back()->with('danger', __('You have canceled this event'));
     }
 }
