@@ -69,5 +69,6 @@
     "Confirm Password Not Matching New Password": "Confirm Password Not Matching New Password",
     "Confirm Password Matching New Password": "Confirm Password Matching New Password",
     "update_success": "Update Information success!",
-    "The avatar must be an image": "The avatar must be an image"
+    "The avatar must be an image": "The avatar must be an image",
+    "Your subscription has expired": "Your subscription has expired"
 }

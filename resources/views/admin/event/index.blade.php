@@ -13,6 +13,14 @@
                     {{Session::get('noti')}}
                 </div>
             @endif
+                <div class="page-header">
+                    <ol class="breadcrumb" style="margin-top: -57px;background: #bfb6b64a">
+                        <li><a href="{{ route('admin.home') }}">Trang chủ</a>
+                        </li>
+                        <li><a href="{{route('admin.get.list.event')}}">Sự Kiện</a>
+                        </li>
+                    </ol>
+                </div>
             <div class="row">
                 <div class="col-md-12">
                     <!-- TABLE STRIPED -->
@@ -25,7 +33,7 @@
                             <div class="col-md-3">
                                 <input type="hidden" name="searchBy" value="place">
                                 <select name="search" class="form-control placeOption">
-                                    <option> Địa điểm</option>
+                                    <option> Địa điểm diễn ra sự kiện</option>
                                     @foreach($listEvent as $item)
                                         <option value="{{$item->place}}">{{$item->place}}</option>
                                     @endforeach
@@ -34,7 +42,7 @@
                         </form>
                         <form action="{{route('admin.get.list.event')}}" method="get">
                             <div class="input-group col-md-3" style="float: left">
-                                <input type="text" class="form-control" name="search" value="{{request()->query('search')}}">
+                                <input type="text" class="form-control" name="search" value="{{request()->query('search')}}" placeholder="Tìm kiếm">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-info" type="submit" style="float: right"><i class="fas fa-search"></i>
                                     </button>
@@ -79,8 +87,9 @@
                                             <td>{{$item->end_time}}</td>
                                             <td>{{$item->intro}}</td>
                                             @if($item->status == 0)
-                                                <td><a href="{{ route('cancel_event',$item->id) }}"
-                                                       class="label label-danger">Hủy</a></td>
+                                                <td>
+                                                    <a href="{{route('cancel_event', ['id' => $item->id])}}" class="label label-success">Hủy</a>
+                                                </td>
                                             @else
                                                 <td><a class="label label-danger">Đã hủy</a></td>
                                             @endif
