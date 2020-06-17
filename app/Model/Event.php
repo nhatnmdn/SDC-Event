@@ -7,11 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    protected $fillable = [
 
-    ];
+    const Public = 1;
+    const Private = 0;
+
+    protected $table = 'events';
+    protected $guarded = ['*'];
 
     public function registrationEvents(){
-        return $this->hasOne(RegistrationEvent::class);
+        return $this->hasMany(RegistrationEvent::class);
     }
 }

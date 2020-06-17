@@ -24,10 +24,8 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('role_id')->default(3);
             $table->integer('status')->default(0);
             $table->foreign('role_id')->references('id')->on('roles');
-            $table->string('activation_token')->nullable();
             $table->rememberToken();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
