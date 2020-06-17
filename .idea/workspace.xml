@@ -21,15 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4cce8dcc-b514-43d7-9a22-c4a88e1feb9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CreateEventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CreateEventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Event/RegisterEventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Event/RegisterEventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vi.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vi.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/event/detail_event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/event/detail_event.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/event/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/event/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/registration/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/registration/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +243,9 @@
       <workItem from="1591666336228" duration="23805000" />
       <workItem from="1591751618126" duration="301000" />
       <workItem from="1591931904638" duration="616000" />
-      <workItem from="1592182842126" duration="15011000" />
+      <workItem from="1592182842126" duration="16385000" />
+      <workItem from="1592270380120" duration="7849000" />
+      <workItem from="1592356392128" duration="12858000" />
     </task>
     <servers />
   </component>
@@ -270,14 +266,22 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="313" y="59" width="800" height="684" key="#Inspections" timestamp="1592358563731">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="313" y="59" width="800" height="684" key="#Inspections/70.27.1296.741@70.27.1296.741" timestamp="1592358563731" />
     <state x="70" y="27" width="476" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590999575925">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="70" y="27" width="476" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/70.27.1296.741@70.27.1296.741" timestamp="1590999575925" />
-    <state x="451" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592212134944">
+    <state x="451" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592360671556">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
-    <state x="451" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/70.27.1296.741@70.27.1296.741" timestamp="1592212134944" />
+    <state x="451" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/70.27.1296.741@70.27.1296.741" timestamp="1592360671556" />
+    <state x="170" y="127" width="1096" height="541" key="DiffContextDialog" timestamp="1592375928079">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="170" y="127" width="1096" height="541" key="DiffContextDialog/70.27.1296.741@70.27.1296.741" timestamp="1592375928079" />
     <state x="454" y="126" width="424" height="491" key="FileChooserDialogImpl" timestamp="1591932054501">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -319,9 +323,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1591670330534" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1591697120635">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="398" y="77" width="672" height="691" key="search.everywhere.popup" timestamp="1592362037441">
+      <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1591697120635" />
+    <state x="398" y="77" width="672" height="691" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1592362037441" />
   </component>
 </project>

@@ -66,7 +66,7 @@
                                     <th>Địa điểm</th>
                                     <th>Bắt đầu</th>
                                     <th>Kết thúc</th>
-                                    <th style="width:200px">Mô tả</th>
+                                    <th style="width:200px">Diễn giả</th>
                                     <th>Hủy sự kiện</th>
                                     <th>Trạng thái</th>
                                     <th style="width: 15%">Thao tác</th>
@@ -85,7 +85,7 @@
                                             <td>{{$item->place}}</td>
                                             <td>{{$item->start_time}}</td>
                                             <td>{{$item->end_time}}</td>
-                                            <td>{{$item->intro}}</td>
+                                            <td>{{$item->chairman}}</td>
                                             @if($item->status == 0)
                                                 <td>
                                                     <a href="{{route('cancel_event', ['id' => $item->id])}}" class="label label-success">Hủy</a>
