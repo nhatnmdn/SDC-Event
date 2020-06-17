@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Event;
+use App\Filters\EventFilter;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminRequestCreateEvent;
 use App\Model\RegistrationEvent;
@@ -19,12 +20,13 @@ class CreateEventController extends Controller
 
     public function index(Request $request)
     {
-        $limits    = $request->get('limits', 10);
-        $search    = $request->get('search', '');
-        $searchKey = $request->get('searchBy', '');
-        $listEvent = Event::all();
+        $limits      = $request->get('limits', 10);
+        $search      = $request->get('search', '');
+        $searchKey   = $request->get('searchBy', '');
+        $listEvent   = Event::all();
+        $eventFilter = new EventFilter();
 
-        $events = $this->event->getEvents($limits, $search, $searchKey);
+        $events = $this->event->getEvents($eventFilter, $limits, $search, $searchKey);
 
         return view('admin.event.index', compact('events', 'listEvent'));
     }

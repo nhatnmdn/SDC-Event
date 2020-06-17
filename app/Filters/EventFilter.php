@@ -7,7 +7,7 @@ class EventFilter extends FilterBase
 {
     public function searchByName($query, $search)
     {
-        return $query->where('name', 'like', "%$search%")->orWhere('intro', 'like', "%$search%");
+        return $query->where('name', 'like', "%$search%")->orWhere('chairman','like',"%$search%");
     }
 
     public function searchByPlace($query, $search)

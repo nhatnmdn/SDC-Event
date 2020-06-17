@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Filters\UserFilter;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateUserRequest;
 use App\Model\Role;
@@ -27,8 +28,9 @@ class ManagerUserController extends Controller
         $limits    = $request->get('limits', 10);
         $search    = $request->get('search', '');
         $searchKey = $request->get('searchBy', '');
+        $userFilter = new UserFilter();
 
-        $users = $this->userFilter->getUsers($limits, $search, $searchKey);
+        $users = $this->userFilter->getUsers($userFilter, $limits, $search, $searchKey);
 
         return view('admin.user.index', compact("users"));
     }
