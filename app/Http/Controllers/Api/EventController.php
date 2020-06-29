@@ -13,6 +13,20 @@ use Illuminate\Support\Str;
 
 class EventController extends Controller
 {
+    public function search(Request $request)
+    {
+        if ($request->key)
+
+        $search = Event::where('name', 'like', '%' . $request->key . '%')->get();
+        if (isset($search)) {
+            return response()->json($search);
+        }else{
+            return response()->json([
+                'message'  => 'khoa mạt lol'
+            ]);
+        }
+    }
+
     public function list_happen(Request $request)
     {
         $now = date('Y-m-d H:i:s');
@@ -28,16 +42,13 @@ class EventController extends Controller
         $user = $request->user();
         $now = date('Y-m-d H:i:s');
         $regis = RegistrationEvent::where('user_id',$user->id)->get();
-        foreach ($regis as $item)
-            echo $item;
-//        $demo = Event::where('start_time','>',$now)->where('status', 0)->select('name')->get();
-//        dd($demo);
+        // foreach ($regis as $item)
+            // echo $item;
+       if ($user) {
+           $list = Event::where('start_time', '>', $now)->where('status', 0)->get();
 
-//        if ($user) {
-//            $list = Event::where('start_time', '>', $now)->where('status', 0)->get();
-//
-//            return response()->json($list);
-//        }
+           return response()->json($list);
+       }
 
     }
 
@@ -132,7 +143,7 @@ class EventController extends Controller
                 'user_id' => $user->id,
                 'registration.status' => 0,
             ])
-            ->select('registration.id', 'registration.user_id', 'registration.event_id', 'registration.status', 'registration.checkin', 'events.name', 'events.chairman', 'events.start_time', 'events.end_time', 'events.image')
+            ->select('registration.id', 'registration.user_id', 'registration.event_id', 'registration.status', 'registration.checkin', 'events.name', 'events.chairman', 'events.start_time', 'events.end_time', 'events.image', 'registration.code')
             ->get();
 
         return response()->json($list);

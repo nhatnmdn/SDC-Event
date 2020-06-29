@@ -8,6 +8,10 @@ Route::post('/register','Api\AuthController@register'); //đăng ký
 Route::get('signup/activate/{token}', 'Api\AuthController@signupActivate'); //xác thực tài khoản
 Route::post('/login','Api\AuthController@login'); //đăng nhập
 
+Route::post('/save_notification','Api\NotificationController@save_notification');
+
+Route::post('/show_notification','Api\NotificationController@show_notification');
+
 Route::group([
     'middleware' => 'api',
 ], function () {
@@ -35,8 +39,10 @@ Route::group(['middleware' => 'api:api', 'namespace' => 'Api'], function(){
         Route::post('/register/{id}','EventController@regis_event'); // đăng kí sự kiện
         Route::put('/cancel/{id}','EventController@cancel_event'); // hủy sự kiện
         Route::get('/history_regis','EventController@history_register_event'); // lịch sử đăng ký sự kiện
+        
     });
 });
+Route::get('/search','Api\EventController@search'); //tìm kiếm
 
 
 
