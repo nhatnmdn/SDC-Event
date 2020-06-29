@@ -27,7 +27,7 @@
     "The phone must be a number": "Trường này bắt buộc là số",
     "Register Failed. Please check again": "Đăng ký thất bại. Vui lòng kiểm tra lại",
     "Enter email to retrieve your password": "Nhập địa chỉ email cần lấy lại mật khẩu",
-    "Send Mail": "Gửi mail",
+    "Send Mail": "Gửi thư",
     "This email has not been registered": "Địa chỉ email không tồn tại!",
     "Profile": "Thông tin",
     "Avatar": "Hình đại diện",
@@ -58,5 +58,17 @@
     "The number of subscribers is full": "Số lượng người đăng ký đã đủ",
     "You need to be logged in to register for the event": "Bạn cần phải đăng nhập trước khi đăng ký sụ kiện!",
     "Cancel registration": "Hủy đăng ký",
-    "You have canceled this event": "Bạn đã hủy sự kiện!"
+    "You have canceled this event": "Bạn đã hủy sự kiện!",
+    "Confirm Password Not Matching Password": "Mật khẩu xác nhận không khớp với mật khẩu",
+    "Confirm Password Matching Password": "Mật khẩu xác nhận khớp với mật khẩu",
+    "register_success": "Đăng ký thành công. Xin vui lòng đăng nhập!",
+    "login_success": "Đăng nhập thành công!",
+    "send_mail_success": "Gửi thư thành công. Xin vui lòng kiểm tra hộp thư của bạn!",
+    "reset_password_success": "Đặt lại mật khẩu thành công. Xin vui lòng đăng nhập!",
+    "change_password_success": "Thay đổi mật khẩu thành công!",
+    "Confirm Password Not Matching New Password": "Mật khẩu xác nhận không khớp với mật khẩu mới",
+    "Confirm Password Matching New Password": "Mật khẩu xác nhận khớp với mật khẩu mới",
+    "update_success": "Cập nhật thông tin thành công!",
+    "The avatar must be an image": "Hình đại diện phải là một hình ảnh",
+    "Your subscription has expired": "Đăng ký của bạn đã hết hạn"
 }

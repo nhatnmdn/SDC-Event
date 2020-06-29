@@ -58,5 +58,17 @@
     "The number of subscribers is full": "The number of subscribers is full",
     "You need to be logged in to register for the event": "You need to be logged in to register for the event!",
     "Cancel registration": "Cancel registration",
-    "You have canceled this event": "You have canceled this event!"
+    "You have canceled this event": "You have canceled this event!",
+    "Confirm Password Not Matching Password": "Confirm Password Not Matching Password",
+    "Confirm Password Matching Password": "Confirm Password Matching Password",
+    "register_success": "Register success. Please login!",
+    "login_success": "Login success!",
+    "send_mail_success": "Send mail success. Please check your email!",
+    "reset_password_success": "Reset password success. Please login!",
+    "change_password_success": "Change password success!",
+    "Confirm Password Not Matching New Password": "Confirm Password Not Matching New Password",
+    "Confirm Password Matching New Password": "Confirm Password Matching New Password",
+    "update_success": "Update Information success!",
+    "The avatar must be an image": "The avatar must be an image",
+    "Your subscription has expired": "Your subscription has expired"
 }

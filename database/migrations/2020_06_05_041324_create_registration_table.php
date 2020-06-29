@@ -33,6 +33,6 @@ class CreateRegistrationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('registration');
+        Schema::dropIfExists('register_events');
     }
 }

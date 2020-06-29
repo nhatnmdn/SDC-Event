@@ -7,90 +7,96 @@
                 <ol class="breadcrumb" style="margin-top: -57px;background: #bfb6b64a">
                     <li><a href="{{ route('admin.home') }}">Trang chủ</a>
                     </li>
-                    <li><a href="#">Danh sách đăng kí</a>
-                    </li>
-                    <li class="active">Danh dách</li>
+                    <li><a href="#">Danh sách người đăng kí</a>
                 </ol>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <!-- TABLE STRIPED -->
-                    <div class="panel-heading">
+                    <div class="panel-heading col-md-12" style="float: left">
                         <h3 class="panel-title">DANH SÁCH ĐĂNG KÍ</h3>
-                    </div>
-                    <div class="panel" style="margin-top:30px">
-                        <div class="panel-body">
-                            <table class="table table-striped">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Tên sự kiện</th>
-                                    <th>Người đăng kí</th>
-                                    <th>Trạng thái</th>
-                                    <th>Thao tác</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Lễ ra mắt xe Vinfast</td>
-                                    <td>
-                                        Nguyễn Văn Đông
-                                    </td>
-                                    <td><a href="#" class="label label-success">Tham gia</a></td>
-                                    <td>
-                                        <a class="label label-info" data-toggle="modal" data-target="#detail">Chi tiết</a>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
+                        <div class="row">
+                            <form action="{{route('admin.get.list.registration')}}" method="get" id="placeSearchForm">
+                                <div class="col-md-3">
+                                    <input type="hidden" name="searchBy" value="event">
+                                    <select name="search" class="form-control placeOption">
+                                        <option>Tên Sự kiện</option>
+                                        @foreach($listEvents as $item)
+                                            <option value="{{$item->name}}">{{$item->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </form>
+                            <div class="card-title col-md-5" style="display: inline-block">
+                                <form action="{{route('admin.get.list.registration')}}" method="get">
+                                    <div class="input-group col-md-6" style="float: left">
+                                        <input type="text" class="form-control" name="search" value="{{request()->query('search')}}" placeholder="Tìm kiếm">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-info" style="float: right" type="submit"><i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" style="float: left">
+                                        <div class="col-5">
+                                            <input type="radio" hidden checked name="searchBy" id="name" value="name" {{request()->query('searchBy') == 'name'}}>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </div>
+                        <div class="panel col-md-12" style="margin-top:30px; float: left">
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Tên sự kiện</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Tên người đăng kí</th>
+                                        <th>Ngày đăng</th>
+                                        <th>Trạng thái</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach($lists as $key => $item)
+                                        <tr>
+                                            <td>{{++$key}}</td>
+                                            <td>{{$item->events->first()->name}}</td>
+                                            <td><img style="with:30px; height:30px" src="{{pare_url_file($item->events->first()->image)}}"></td>
+                                            <td>{{$item->users->first()->name}}</td>
+                                            <td>{{$item->created_at}}</td>
+                                            @if($item->status == 0)
+                                                <td>
+                                                    <p class="label label-success">Đã đăng ký</p>
+                                                </td>
+                                            @else
+                                                <td><p class="label label-danger">Đã hủy</p></td>
+                                            @endif
+                                            <td>
+                                                <a class="label label-info" href="{{route('admin.detail.registration',$item->id)}}">Chi tiết</a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    {{$lists->links()}}
                     <!-- END TABLE STRIPED -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                ok
-            </div>
-        </div>
-    </div>
-
-
-    <div id="detail" class="modal fade bd-example-modal-xl" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background-color:#4385F5">
-                    <h4 class="modal-title" id="exampleModalLabel" style="color:white">Sự kiện | LỄ RA MẮT XE VINFAST
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                    </h4>
-
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-lg-7">
-                            <p>Bắt đầu : 20/05/2020</p>
-                            <p>Kết thúc : 20/05/2020</p>
-                            <p style="text-align:justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero placeat voluptates laboriosam nihil laborum at, animi maxime voluptatum dignissimos totam unde voluptatem incidunt, rerum quidem facere natus odit veniam. Temporibus incidunt odio laudantium dolor optio fugit fugiat quam repellendus nostrum. Modi, unde. Dolorum explicabo possimus non, perspiciatis placeat quo magnam architecto aspernatur nemo dicta, ipsa itaque accusantium ex corporis culpa in minima error sunt! Nostrum tenetur excepturi molestias! Delectus, aut sunt eveniet debitis ipsam perferendis tempora, praesentium labore optio repellendus ut autem itaque aliquam consequatur dolorem voluptatem magni soluta voluptates ipsa! Eius culpa, nihil ullam quisquam beatae accusamus hic asperiores quae optio alias et ratione reiciendis voluptatum quasi laborum recusandae expedita possimus eveniet illo molestiae obcaecati est perspiciatis dolores! Ut ab quaerat minus eligendi cum cupiditate, inventore rerum. Corrupti beatae quos modi explicabo a natus. Corrupti dolores accusantium voluptates ea, dolor assumenda necessitatibus consectetur maxime debitis natus ducimus, sapiente id nemo commodi. Quod eos reprehenderit illum a, minima assumenda non ipsa? Qui quod odit iusto, soluta dolorem eaque quae minima natus ipsum vel quisquam voluptatum ducimus illo illum, atque, doloremque quos voluptatibus debitis magnam numquam eveniet laboriosam quia incidunt pariatur! Inventore, aliquid. Mollitia hic vel omnis perferendis molestiae in placeat!</p>
-                        </div>
-                        <div class="col-lg-5">
-                            <img src="{{asset('assets/img/vin.jpg')}}" style="width:100%;height:auto">
-                        </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-info" data-dismiss="modal">Đóng</button>
-
-                </div>
             </div>
         </div>
     </div>
+@endsection
 
+@section('script')
+    <script>
+        $(document).ready(function () {
+            $(".placeOption").change(function () {
+                $("#placeSearchForm").submit()
+            })
+        })
+    </script>
 @endsection

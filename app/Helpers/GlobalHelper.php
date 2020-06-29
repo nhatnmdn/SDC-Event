@@ -23,10 +23,26 @@ class GlobalHelper
     }
 
     public static $message = [
-        'register_success'        => ['messages' => 'Register success. Please login!'],
+        'register_success'        => [
+            [
+                'en' => 'Register success. Please login!',
+                'vi' => 'Đăng ký thành công. Xin vui lòng đăng nhập!',
+            ],
+        ],
+        'login_success'           => [
+            [
+                'en' => 'Register success. Please login!',
+                'vi' => 'Đăng ký thành công. Xin vui lòng đăng nhập!',
+            ],
+        ],
         'send_mail_success'       => ['messages' => 'Send mail success. Please check your email!'],
         'reset_password_success'  => ['messages' => 'Reset password success. Please login!'],
         'change_password_success' => ['messages' => 'Change password success!'],
         'update_success'          => ['messages' => 'Update Information success!'],
     ];
+
+    public static function snakeCaseToPascalCase($string)
+    {
+        return str_replace('_', '', ucwords($string, '_'));
+    }
 }

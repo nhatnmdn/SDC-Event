@@ -51,7 +51,8 @@
             </div>
             <div class="col-md-6">
                 <input type="password" id="password_confirmation" class="form-control" name="password_confirmation" placeholder="{{__('Enter Confirm password')}}">
-                @if($errors->any())
+                <span id="message"></span>
+            @if($errors->any())
                     @foreach($errors->get('password_confirmation') as $messages)
                         <i style="color: red; font-size: 90%; font-family: sans-serif">*{{$messages}}
                             <br></i>
@@ -62,4 +63,15 @@
         <button type="submit" style="margin-right: 130px" class="float-right btn btn-success">{{__('Confirm')}}</button>
         <a href="{{url()->previous()}}" class="btn btn-info" style="margin-left: 100px;"><i class="fa fa-arrow-left mr-1"></i>{{__('Back')}}</a>
     </form>
+@endsection
+
+@section('script')
+    <script>
+        $('#new_password, #password_confirmation').on('keyup', function () {
+            if ($('#new_password').val() == $('#password_confirmation').val()) {
+                $('#message').text('{{__("Confirm Password Matching New Password")}}').css('color', 'green');
+            } else
+                $('#message').text('{{__('Confirm Password Not Matching New Password')}}').css('color', 'red');
+        });
+    </script>
 @endsection

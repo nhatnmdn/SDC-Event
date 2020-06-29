@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Filters\UserFilter;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
@@ -19,16 +19,29 @@ class User extends Authenticatable
     use HasApiTokens, Notifiable;
 
     protected $fillable = [
-        'name', 'email', 'password','address','phone','status','avatar',
+        'name',
+        'email',
+        'password',
+        'address',
+        'phone',
+        'status',
+        'avatar',
+        'role_id',
     ];
 
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
 
     public function registrationEvents()
     {
-        return $this->belongsToMany(RegistrationEvent::class);
+        return $this->hasMany(RegistrationEvent::class);
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
     }
 
     public function login($params)
@@ -45,7 +58,6 @@ class User extends Authenticatable
     public function store($params)
     {
         $params['password'] = bcrypt($params['password']);
-
         return User::create($params);
     }
 
@@ -105,5 +117,16 @@ class User extends Authenticatable
         $user = User::where('id', $userId)->first();
 
         return $user->update($data);
+    }
+
+    public function getUsers(UserFilter $userFilter, $limits, $search, $searchKey)
+    {
+        $query = User::query();
+
+        if (!empty($searchKey) && !empty($search)) {
+            $query = $userFilter->search($query, $search, $searchKey);
+        }
+
+        return $query->orderByDesc('created_at')->paginate($limits);
     }
 }
