@@ -12,6 +12,7 @@ class NotificationController extends Controller
 {
 	public function save_notification(Request $request){
         $user = Auth::user();
+        dd($user);
         if($user){
             $device = new Device_token;
             $device->token = $request->token;
@@ -34,8 +35,8 @@ class NotificationController extends Controller
             ->get();
             foreach( $device as $devices){
                 $token = $devices->token;
-
-            $body = "Bạn đã đăng ký thành công sự kiện";
+            $token = "crUHxmmYTL-5dF_k7ymdSj:APA91bFBmdUaYJUhOwSv-a6o7PS9lgWDc6pamaTpUTiNELspy1771RZmkTqa7KcesxhO-VYXOKJPOjsgCw-YYumKLqo65VCwidfNSQpJvzjeAVoDgrJPwKJsghXOy8pseh_1f7SP4lcI";
+            $body = "Bạn đã checkin thành công!";
             $title = "SDC Thông báo";
             $notification = [
                 'title' => $title,
@@ -49,7 +50,7 @@ class NotificationController extends Controller
             ];
             $json = json_encode($fcmNotification);
             $headers = [
-                'Authorization: key= AAAAuja7SH4:APA91bEd5sE4B2K1MtzM6GIx3DcYxTvP6FyD42f-BiKCISOtVApMewoHfTBjT_BCy18kjaoY0CUdEOzkinLwn6xYKLX-YHZ72gAW-iAQibpJCMuouX2W0doj5Mo6vwJfX2oz8cFIQpA-',
+                'Authorization: key= AAAAYUG1AgI:APA91bEddyRecCs2SpJPawuAOWHJ4HpLrpX9RvXSQml9x64fefEuWH6_zDuj5SaXavoFOLoMZ6Zu0V51zhVgpOQTsmfgr5v5MHn2HGIzBrGKa2Wj0qgX7Ab1RBVPrBZheQJN8yDAsezx',
                 'Content-Type: application/json'
             ];
 
