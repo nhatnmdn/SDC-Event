@@ -12,6 +12,7 @@ Route::post('/save_notification','Api\NotificationController@save_notification')
 
 Route::post('/show_notification','Api\NotificationController@show_notification');
 
+Route::get('/search','Api\EventController@search'); //tìm kiếm
 Route::group([
     'middleware' => 'api',
 ], function () {

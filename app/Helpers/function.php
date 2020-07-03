@@ -26,8 +26,9 @@ if (!function_exists('upload_image')) {
         $filename = date('Y-m-d__') .$nameFile . '.' . $ext;
 // thu muc goc de upload
         $path = public_path() . '/uploads/' . date('Y/m/d/');
+
         if ($folder) {
-            $path = public_path() . '/uploads/' . $folder . '/' . date('Y/m/d/');
+            $path = public_path() . '/uploads/';
         }
         if (!\File::exists($path)) {
             mkdir($path, 0777, true);
@@ -51,7 +52,7 @@ if (!function_exists('pare_url_file')) {
         $explode = explode('__', $image);
         if (isset($explode[0])) {
             $time = str_replace('_', '/', $explode[0]);
-            return '/uploads/' . $folder . '/' . date('Y/m/d', strtotime($time)) . '/' . $image;
+            return '/uploads/'. $image;
         }
     }
 }
