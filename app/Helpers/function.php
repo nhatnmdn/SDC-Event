@@ -29,10 +29,10 @@ if (!function_exists('upload_image'))// trả về giá trị TRUE nếu hàm đ
         $filename = date('Y-m-d__') . str_slug($nameFile) . '.' . $ext;
 
         // thu muc goc de upload
-        $path = public_path() . '/uploads/' . date('Y/m/d/');
+        $path = public_path() . '/uploads/';
 
         if ($folder) {
-            $path = public_path() . '/uploads/' . $folder . '/' . date('Y/m/d/');
+            $path = public_path() . '/uploads/';
         }
 
         if (!\File::exists($path)) {
@@ -60,7 +60,7 @@ if (!function_exists('pare_url_file')) {
         $explode = explode('__', $image);
         if (isset($explode[0])) {
             $time = str_replace('_', '/', $explode[0]);
-            return '/uploads/' . $folder . '/' . date('Y/m/d', strtotime($time)) . '/' . $image;
+            return '/uploads/'. $image;
         }
     }
 }

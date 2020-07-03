@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('/register','Api\AuthController@register'); //đăng ký
 Route::get('signup/activate/{token}', 'Api\AuthController@signupActivate'); //xác thực tài khoản
 Route::post('/login','Api\AuthController@login'); //đăng nhập
-
+Route::get('/search','Api\EventController@search'); //tìm kiếm
 Route::group([
     'middleware' => 'api',
 ], function () {

@@ -137,4 +137,13 @@ class EventController extends Controller
 
         return response()->json($list);
     }
+
+    public function search(Request $request)
+    {
+        if ($request->key)
+            
+        $search = Event::where('name', 'like', '%' . $request->key . '%')->get();
+
+        return response()->json($search);
+    }
 }
