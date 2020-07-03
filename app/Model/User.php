@@ -26,19 +26,13 @@ class User extends Authenticatable
         'phone',
         'status',
         'avatar',
+        'role_id',
     ];
 
     protected $hidden = [
         'password',
         'remember_token',
     ];
-
-    protected $userFilter;
-
-    public function __construct()
-    {
-        $this->userFilter = app(UserFilter::class);
-    }
 
     public function registrationEvents()
     {
@@ -64,7 +58,6 @@ class User extends Authenticatable
     public function store($params)
     {
         $params['password'] = bcrypt($params['password']);
-
         return User::create($params);
     }
 
@@ -126,12 +119,12 @@ class User extends Authenticatable
         return $user->update($data);
     }
 
-    public function getUsers($limits, $search, $searchKey)
+    public function getUsers(UserFilter $userFilter, $limits, $search, $searchKey)
     {
         $query = User::query();
 
         if (!empty($searchKey) && !empty($search)) {
-            $query = $this->userFilter->search($query, $search, $searchKey);
+            $query = $userFilter->search($query, $search, $searchKey);
         }
 
         return $query->orderByDesc('created_at')->paginate($limits);

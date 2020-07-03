@@ -14,24 +14,18 @@ class Event extends Model
 
     protected $table   = 'events';
     protected $guarded = ['*'];
-    protected $eventFilter;
-
-    public function __construct()
-    {
-        $this->eventFilter = app(EventFilter::class);
-    }
 
     public function registrationEvents()
     {
         return $this->hasMany(RegistrationEvent::class);
     }
 
-    public function getEvents($limits, $search, $searchKey)
+    public function getEvents(EventFilter $eventFilter, $limits, $search, $searchKey)
     {
         $query = Event::query();
 
         if (!empty($searchKey) && !empty($search)) {
-            $query = $this->eventFilter->search($query, $search, $searchKey);
+            $query = $eventFilter->search($query, $search, $searchKey);
         }
 
         return $query->orderByDesc('created_at')->paginate($limits);

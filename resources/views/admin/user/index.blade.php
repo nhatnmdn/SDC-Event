@@ -8,15 +8,22 @@
                     {{Session::get('success')}}
                 </div>
             @endif
+                <div class="page-header">
+                    <ol class="breadcrumb" style="margin-top: -57px;background: #bfb6b64a">
+                        <li><a href="{{ route('admin.home') }}">Trang chủ</a>
+                        </li>
+                        <li class="active">Danh sách người dùng</li>
+                    </ol>
+                </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel-heading">
-                        <h3 class="panel-title">NGƯỜI DÙNG<a style="color:white; float: left" class="btn btn-success pull-right" href="{{route('admin.get.create.user')}}">Thêm</a></h3>
+                        <h3 class="panel-title">DANH SÁCH NGƯỜI DÙNG<a style="color:white; float: left" class="btn btn-success pull-right" href="{{route('admin.get.create.user')}}">Thêm</a></h3>
                         <div class="row">
                         <div class="card-title col-md-12">
                             <form action="{{route('admin.get.list.user')}}" method="get">
                                 <div class="input-group col-md-3" style="float: left">
-                                    <input type="text" class="form-control" name="search" value="{{request()->query('search')}}">
+                                    <input type="text" class="form-control" name="search" value="{{request()->query('search')}}" placeholder="Tìm kiếm">
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-info" style="float: right" type="submit"><i class="fas fa-search"></i>
                                         </button>
@@ -53,7 +60,7 @@
                                     <td>{{$item->name}}</td>
                                     <td> {{$item->email}} </td>
                                     <td>{{$item->role->name}}</td>
-                                    <td><a href="#" class="label label-success">Hoạt động</a></td>
+                                    <td><p class="label label-success">Hoạt động</p></td>
                                     <td>
                                         <a
                                             href="{{route('admin.detail',$item->id)}}"
